@@ -7469,6 +7469,18 @@ a:hover {
   -o-object-fit: cover;
   object-fit: cover;
 }
+.welcome__img:after {
+  content: "";
+  display: block;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1E1E1E), color-stop(50%, rgba(30, 30, 30, 0.9)), to(rgba(30, 30, 30, 0.6)));
+  background: -o-linear-gradient(top, #1E1E1E, rgba(30, 30, 30, 0.9) 50%, rgba(30, 30, 30, 0.6));
+  background: linear-gradient(to bottom, #1E1E1E, rgba(30, 30, 30, 0.9) 50%, rgba(30, 30, 30, 0.6));
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 .welcome__menu {
   width: 25%;
 }
