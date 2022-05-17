@@ -18,6 +18,7 @@ body {
   background-color: #fff;
   font-family: "HelveticaNeueCyr", sans-serif;
   font-size: 16px;
+  line-height: 1.2;
   &.lock {
     overflow: hidden;
   }
@@ -67,6 +68,9 @@ svg {
 }
 .text-ttu {
   text-transform: uppercase;
+}
+.text-crossed {
+  text-decoration: line-through;
 }
 a {
   color: $black;
