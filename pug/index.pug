@@ -1,0 +1,45 @@
+extends core/base.pug
+
+block title 
+  title Главная
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // welcome
+      .welcome
+        .container 
+          .welcome__img 
+            img(src="img/main_bg.jpg", alt="")
+          .welcome__menu 
+            // subcatalog 
+            .subcatalog 
+              ul.subcatalog__list 
+                li 
+                  a(href="") Грузоподъемное оборудование
+                li 
+                  a(href="") Комплектующие для строп и такелаж
+                li 
+                  a(href="") Складская техника
+                li 
+                  a(href="") Колеса и колесные опоры
+            //	/subcatalog 
+          .welcome__content 
+            
+      //	/welcome
+
+      //- // main 
+      //- .main 
+      //-   .main__img 
+      //-     img(src="img/main_bg.jpg", alt="")
+      //-   aside.main__menu 
+
+      //-   main.main__content 
+      //- //	/main 
+
+    include core/footer.pug

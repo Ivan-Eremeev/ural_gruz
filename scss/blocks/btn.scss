@@ -1,0 +1,32 @@
+/* btn */
+.btn { 
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 30px 12px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+  text-align: center;
+  &--red {
+    background-color: $red;
+    color: #fff;
+    border: none;
+    &:hover {
+      background-color: lighten($red, 20%);
+    }
+  }
+  &--white {
+    background-color: #fff;
+    color: $red;
+    border: 1px solid $red;
+    &:hover {
+      background-color: $red;
+      color: #fff;
+    }
+  }
+}
+/* /btn */

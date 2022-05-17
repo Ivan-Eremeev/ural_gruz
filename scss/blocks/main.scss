@@ -1,0 +1,24 @@
+/* main */
+.main { 
+  position: relative;
+  &__img {
+    height: 455px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__menu {
+    
+  }
+  &__content {
+    
+  }
+}
+/* /main */

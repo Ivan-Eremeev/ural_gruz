@@ -1,0 +1,16 @@
+/* subcatalog */
+.subcatalog { 
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.25);
+  &__list {
+    li {
+      a {
+        display: block;
+        padding: 16px 30px;
+        color: #fff;
+        border-top: 1px solid rgba(240, 240, 240, .14);
+      }
+    } 
+  }
+}
+/* /subcatalog */
