@@ -18,7 +18,7 @@
 // $break_xs: 500px;
 
 // Переменные для кастомизации Bootstrap 5
-$grid-gutter-width: 15px; // Отступы между колонками
+$grid-gutter-width: 30px; // Отступы между колонками
 $grid-columns: 12; // Колличество колонок
 $grid-breakpoints: ( // Брейкпоинты
   xs: 0,
@@ -88,6 +88,7 @@ $gray: #908585;
 @import 'blocks/main';
 @import 'blocks/search';
 @import 'blocks/about-section';
+@import 'blocks/advantages';
 // @import 'hamburgers/hamburgers';
 // @import 'blocks/accordion';
 // @import 'blocks/modal';

@@ -1,0 +1,30 @@
+/* advantages */
+.advantages { 
+  margin-bottom: 40px;
+  .row {
+    margin-top: -35px;
+    > * {
+      padding-top: 35px;
+    }
+  }
+  .title {
+    margin-bottom: 15px;
+  }
+  &__item {
+    text-align: center;
+  }
+  &__icon {
+    height: 90px;
+    margin-bottom: 16px;
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  &__text {
+    color: #908585;
+    font-weight: 300;
+  }
+}
+/* /advantages */
