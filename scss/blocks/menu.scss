@@ -35,9 +35,6 @@
         margin-right: 30px;
         transition: 0.3s;
       }
-      &.active {
-        background-color: $red;
-      }
     }
     &.active {
       background-color: #fff;
@@ -64,15 +61,17 @@
   }
   @include media-breakpoint-up(md) {
     &__catalog-btn {
+      a {
+        &.active {
+          background-color: $red;
+        }
+      }
       &:hover {
         a {
           background-color: $red;
           color: #fff !important;
           svg {
             fill: #fff;
-          }
-          &.active {
-            background-color: $red;
           }
         }
       }
@@ -82,7 +81,7 @@
     font-size: 14px;
   }
   @include media-breakpoint-down(md) {
-    border-bottom: 1px solid #E5E2E3;
+    border-color:#E5E2E3;
     background-color: #fff;
     &__list {
       li {

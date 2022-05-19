@@ -138,7 +138,7 @@
 }
 
 // stiky menu
-#header {
+#stiky {
   width: 100%;
   position: absolute;
   &.stiky {
@@ -149,6 +149,7 @@
     animation: showStyky 0.5s;
     .menu {
       background-color: #fff;
+      border-color: #E5E2E3;
       &__list {
         li {
           a {
@@ -160,20 +161,23 @@
         }
       }
       &__catalog-btn {
+        background-color: #ededed;
         a {
           svg {
             fill: $black;
           }
-          &:hover {
-            svg {
-              fill: #fff;
+          @include media-breakpoint-up(md) {
+            &:hover {
+              svg {
+                fill: #fff;
+              }
             }
-          }
-          &.active {
-            background-color: $red;
-            color: #fff;
-            svg {
-              fill: #fff;
+            &.active {
+              background-color: $red;
+              color: #fff;
+              svg {
+                fill: #fff;
+              }
             }
           }
         }

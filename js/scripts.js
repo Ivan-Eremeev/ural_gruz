@@ -130,15 +130,22 @@ window.onload = () => {
     link.on('click', function (e) {
       e.preventDefault();
       let $this = $(this);
-      sublist.stop().slideUp();
-      $this.next('.catalog-menu__sublist').stop().slideToggle();
+      if (!$this.hasClass('active')) {
+        sublist.stop().slideUp();
+        $this.next('.catalog-menu__sublist').stop().slideDown();
+        link.removeClass('active');
+        $this.toggleClass('active');
+      } else {
+        sublist.stop().slideUp();
+        link.removeClass('active');
+      }
     })
   }
   menuCatalog();
 
   // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
   function stikyMenu() {
-    const header = document.querySelector('#header');
+    const header = document.querySelector('#stiky');
 
     setNavbarPosition();
 
@@ -147,8 +154,8 @@ window.onload = () => {
     });
 
     function setNavbarPosition() {
-
-      if (window.scrollY > header.clientTop + 200) {
+      
+      if (window.scrollY > header.clientTop + 250 && $(window).width() > breakSm) {
         header.classList.add('stiky');
       } else {
         header.classList.remove('stiky');

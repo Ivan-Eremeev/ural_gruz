@@ -7347,11 +7347,11 @@ a:hover {
   }
 }
 
-#header {
+#stiky {
   width: 100%;
   position: absolute;
 }
-#header.stiky {
+#stiky.stiky {
   position: fixed;
   top: 0;
   left: 0;
@@ -7359,32 +7359,38 @@ a:hover {
   -webkit-animation: showStyky 0.5s;
   animation: showStyky 0.5s;
 }
-#header.stiky .menu {
+#stiky.stiky .menu {
   background-color: #fff;
+  border-color: #E5E2E3;
 }
-#header.stiky .menu__list li a {
+#stiky.stiky .menu__list li a {
   color: #333;
 }
-#header.stiky .menu__list li a:hover {
+#stiky.stiky .menu__list li a:hover {
   color: #db0909;
 }
-#header.stiky .menu__catalog-btn a svg {
+#stiky.stiky .menu__catalog-btn {
+  background-color: #ededed;
+}
+#stiky.stiky .menu__catalog-btn a svg {
   fill: #333;
 }
-#header.stiky .menu__catalog-btn a:hover svg {
-  fill: #fff;
+@media (min-width: 768px) {
+  #stiky.stiky .menu__catalog-btn a:hover svg {
+    fill: #fff;
+  }
+  #stiky.stiky .menu__catalog-btn a.active {
+    background-color: #db0909;
+    color: #fff;
+  }
+  #stiky.stiky .menu__catalog-btn a.active svg {
+    fill: #fff;
+  }
 }
-#header.stiky .menu__catalog-btn a.active {
-  background-color: #db0909;
-  color: #fff;
-}
-#header.stiky .menu__catalog-btn a.active svg {
-  fill: #fff;
-}
-#header.stiky .menu__search svg {
+#stiky.stiky .menu__search svg {
   fill: #333;
 }
-#header.stiky .menu__search a:hover svg {
+#stiky.stiky .menu__search a:hover svg {
   fill: #db0909;
 }
 
@@ -7477,6 +7483,17 @@ a:hover {
   position: absolute;
   top: 3px;
   right: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.catalog-menu__link.active {
+  color: #db0909;
+}
+.catalog-menu__link.active svg {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 .catalog-menu__sublist {
   display: none;
@@ -7589,9 +7606,6 @@ a:hover {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-.menu__catalog-btn a.active {
-  background-color: #db0909;
-}
 .menu__catalog-btn.active {
   background-color: #fff;
 }
@@ -7618,15 +7632,15 @@ a:hover {
   fill: #db0909;
 }
 @media (min-width: 768px) {
+  .menu__catalog-btn a.active {
+    background-color: #db0909;
+  }
   .menu__catalog-btn:hover a {
     background-color: #db0909;
     color: #fff !important;
   }
   .menu__catalog-btn:hover a svg {
     fill: #fff;
-  }
-  .menu__catalog-btn:hover a.active {
-    background-color: #db0909;
   }
 }
 @media (max-width: 991.98px) {
@@ -7636,7 +7650,7 @@ a:hover {
 }
 @media (max-width: 767.98px) {
   .menu {
-    border-bottom: 1px solid #E5E2E3;
+    border-color: #E5E2E3;
     background-color: #fff;
   }
   .menu__list li a {

@@ -59,6 +59,13 @@
       position: absolute;
       top: 3px;
       right: 0;
+      transition: 0.3s;
+    }
+    &.active {
+      color: $red;
+      svg {
+        transform: rotate(90deg);
+      }
     }
   }
   &__sublist {
