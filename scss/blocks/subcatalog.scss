@@ -1,24 +1,108 @@
 /* subcatalog */
 .subcatalog { 
-  height: 100%;
+  height: calc(100% + 1px);
   background-color: rgba(255, 255, 255, 0.25);
+  position: relative;
+  z-index: 11;
+  margin-top: -1px;
   &__list {
-    li {
-      a {
-        display: block;
-        padding: 15px 40px 15px 30px;
-        color: #fff;
-        border-top: 1px solid rgba(250, 250, 250, .14);
-        position: relative;
-        svg {
-          fill: #fff;
-          position: absolute;
-          top: 50%;
-          right: 22px;
-          transform: translate(0,-50%);
-        }
+
+  }
+  &__item {
+    
+  }
+  &__link {
+    display: block;
+    padding: 15px 45px 15px 30px;
+    color: #fff;
+    border-top: 1px solid rgba(250, 250, 250, .14);
+    position: relative;
+    svg {
+      fill: #fff;
+      position: absolute;
+      top: 50%;
+      right: 22px;
+      transform: translate(0, -50%);
+      transition: 0.3s;
+    }
+    &:hover {
+      color: #fff;
+    }
+    &.active {
+      background-color: #ededed;
+      color: $red !important;
+      svg {
+        fill: $red !important;
       }
-    } 
+    }
+  }
+  &__sublist, &__sublist2 {
+    display: none;
+    width: 350px;
+    padding: 10px 0;
+    background-color: #ededed;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    &:after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: #DFDFDF;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    ul {
+      height: 100%;
+      overflow-y: auto;
+      // -ms-overflow-style: none;
+      // scrollbar-width: none;
+      // &::-webkit-scrollbar {
+      //   width: 0;
+      //   height: 0;
+      // }
+    }
+    &.open {
+      display: block;
+    }
+  }
+  &__subitem {
+    
+  }
+  &__sublink {
+    display: block;
+    padding: 6px 40px 6px 30px;
+    color: $black;
+    position: relative;
+    svg {
+      fill: #d0cfcf;
+      position: absolute;
+      top: 50%;
+      right: 22px;
+      transform: translate(0, -50%);
+      transition: 0.3s;
+    }
+    &:hover {
+      color: $black;
+    }
+    &.active {
+      color: $red;
+      svg {
+        fill: $red;
+      }
+    }
+  }
+  &.active {
+    background-color: #fff;
+    .subcatalog__link {
+      color: $black;
+       svg {
+        fill: $black;
+      }
+    }
   }
 }
 /* /subcatalog */

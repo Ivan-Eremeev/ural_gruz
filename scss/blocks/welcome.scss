@@ -177,9 +177,6 @@
     &__menu {
       display: none;
     }
-    &__slider-banner {
-      padding-right: 30px;
-    }
     &__content {
       width: 100%;
       padding: 20px 0;
@@ -190,6 +187,11 @@
           text-align: center;
         }
       }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__slider-banner {
+      padding-right: 30px;
     }
   }
   @include media-breakpoint-down(sm) {

@@ -1,5 +1,6 @@
 /* header */
 .header { 
+  z-index: 20;
   &__top {
     padding: 20px 0 22px;
     .container {
@@ -10,7 +11,7 @@
     }
   }
   &__bottom {
-
+    position: relative;
   }
   &__col {
     padding-left: 10px;

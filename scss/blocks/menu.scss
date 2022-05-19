@@ -33,10 +33,16 @@
         flex-shrink: 0;
         fill: #fff;
         margin-right: 30px;
+        transition: 0.3s;
       }
-      &:hover {
-        background-color: $red;
-        color: #fff !important;
+    }
+    &.active {
+      background-color: #fff;
+      a {
+        color: $black;
+        svg {
+          fill: $black;
+        }
       }
     }
   }
@@ -52,6 +58,22 @@
         fill: $red;
       }
     }
+  }
+  @include media-breakpoint-up(md) {
+    &__catalog-btn {
+      &:hover {
+        a {
+          background-color: $red;
+          color: #fff !important;
+          svg {
+            fill: #fff;
+          }
+          &.active {
+            background-color: $red;
+          }
+        }
+      }
+    }  
   }
   @include media-breakpoint-down(lg) {
     font-size: 14px;

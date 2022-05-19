@@ -66,7 +66,6 @@ $spacers: (
 @include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyrRoman_0", normal, normal);
 @include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyrItalic_0", normal, italic);
 @include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyrMedium_0", 500, normal);
-@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/", normal, normal);
 @include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyrBold_0", bold, normal);
 @include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyrBoldItalic_0", bold, italic);
 @include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyrBlack_0", 900, normal);
@@ -82,6 +81,7 @@ $gray: #908585;
 @import 'blocks/btn';
 @import 'blocks/input';
 @import 'blocks/header';
+@import 'blocks/catalog-menu';
 @import 'blocks/menu';
 @import 'blocks/welcome';
 @import 'blocks/subcatalog';
