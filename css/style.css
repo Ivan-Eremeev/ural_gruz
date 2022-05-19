@@ -8022,6 +8022,11 @@ a:hover {
 .main {
   position: relative;
 }
+.main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .main__img {
   height: 455px;
   position: absolute;
@@ -8035,6 +8040,23 @@ a:hover {
   -o-object-fit: cover;
   object-fit: cover;
 }
+.main__menu {
+  width: 25%;
+}
+.main__content {
+  width: 75%;
+  padding: 28px 30px 19px;
+}
+@media (max-width: 991.98px) {
+  .main__menu {
+    display: none;
+  }
+  .main__content {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
 /* /main */
 /* search */
 .search {
@@ -8115,3 +8137,72 @@ a:hover {
 }
 
 /* /search */
+/* about-section */
+.about-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 36px 0px 37px;
+  background-image: -o-linear-gradient(358deg, #e0dddd 0%, #ffffff 99%);
+  background-image: linear-gradient(92deg, #e0dddd 0%, #ffffff 99%);
+  position: relative;
+}
+.about-section__img {
+  width: 152px;
+  margin-right: 20px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.about-section__content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.about-section__content p {
+  margin: 13px 0;
+  line-height: 23px;
+}
+.about-section__title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0;
+  line-height: 21px;
+}
+.about-section:after {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 62px;
+  background-color: #db0909;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: -3px;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+@media (max-width: 767.98px) {
+  .about-section {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 20px 10px 10px;
+  }
+  .about-section:after {
+    width: 4px;
+    height: 40px;
+    left: -2px;
+    top: 20px;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .about-section__img {
+    margin-left: 20px;
+  }
+}
+
+/* /about-section */
