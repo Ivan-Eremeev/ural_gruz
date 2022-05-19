@@ -7197,6 +7197,7 @@ a:hover {
 }
 .header__bottom {
   position: relative;
+  height: 55px;
 }
 .header__col {
   padding-left: 10px;
@@ -7343,10 +7344,71 @@ a:hover {
     top: 0;
     letter-spacing: 0;
     z-index: 10;
-    border-bottom: 1px solid #E5E2E3;
   }
 }
 
+#header {
+  width: 100%;
+  position: absolute;
+}
+#header.stiky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-animation: showStyky 0.5s;
+  animation: showStyky 0.5s;
+}
+#header.stiky .menu {
+  background-color: #fff;
+}
+#header.stiky .menu__list li a {
+  color: #333;
+}
+#header.stiky .menu__list li a:hover {
+  color: #db0909;
+}
+#header.stiky .menu__catalog-btn a svg {
+  fill: #333;
+}
+#header.stiky .menu__catalog-btn a:hover svg {
+  fill: #fff;
+}
+#header.stiky .menu__catalog-btn a.active {
+  background-color: #db0909;
+  color: #fff;
+}
+#header.stiky .menu__catalog-btn a.active svg {
+  fill: #fff;
+}
+#header.stiky .menu__search svg {
+  fill: #333;
+}
+#header.stiky .menu__search a:hover svg {
+  fill: #db0909;
+}
+
+@-webkit-keyframes showStyky {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes showStyky {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
 /* /header */
 /* catalog-menu */
 .catalog-menu {
@@ -7375,10 +7437,10 @@ a:hover {
   overflow-y: auto;
 }
 .catalog-menu .row {
-  margin-left: -84px;
+  margin-left: -50px;
 }
 .catalog-menu .row > * {
-  padding-left: 84px;
+  padding-left: 50px;
 }
 .catalog-menu__title {
   font-size: 18px;
@@ -7461,7 +7523,7 @@ a:hover {
   }
   .catalog-menu__title {
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .catalog-menu__mobile-list {
     display: block;
@@ -7527,6 +7589,9 @@ a:hover {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
+.menu__catalog-btn a.active {
+  background-color: #db0909;
+}
 .menu__catalog-btn.active {
   background-color: #fff;
 }
@@ -7571,6 +7636,7 @@ a:hover {
 }
 @media (max-width: 767.98px) {
   .menu {
+    border-bottom: 1px solid #E5E2E3;
     background-color: #fff;
   }
   .menu__list li a {

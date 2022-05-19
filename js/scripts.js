@@ -136,4 +136,26 @@ window.onload = () => {
   }
   menuCatalog();
 
+  // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
+  function stikyMenu() {
+    const header = document.querySelector('#header');
+
+    setNavbarPosition();
+
+    window.addEventListener('scroll', () => {
+      setNavbarPosition();
+    });
+
+    function setNavbarPosition() {
+
+      if (window.scrollY > header.clientTop + 200) {
+        header.classList.add('stiky');
+      } else {
+        header.classList.remove('stiky');
+      }
+
+    }
+  }
+  stikyMenu();
+
 }

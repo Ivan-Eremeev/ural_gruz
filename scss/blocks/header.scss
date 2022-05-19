@@ -12,6 +12,7 @@
   }
   &__bottom {
     position: relative;
+    height: 55px;
   }
   &__col {
     padding-left: 10px;
@@ -132,8 +133,74 @@
       top: 0;
       letter-spacing: 0;
       z-index: 10;
-      border-bottom: 1px solid #E5E2E3;
     }
+  }
+}
+
+// stiky menu
+#header {
+  width: 100%;
+  position: absolute;
+  &.stiky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: showStyky 0.5s;
+    .menu {
+      background-color: #fff;
+      &__list {
+        li {
+          a {
+            color: $black;
+            &:hover {
+              color: $red;
+            }
+          }
+        }
+      }
+      &__catalog-btn {
+        a {
+          svg {
+            fill: $black;
+          }
+          &:hover {
+            svg {
+              fill: #fff;
+            }
+          }
+          &.active {
+            background-color: $red;
+            color: #fff;
+            svg {
+              fill: #fff;
+            }
+          }
+        }
+      }
+      &__search {
+        svg {
+          fill: $black;
+        }
+        a {
+          &:hover {
+            svg {
+              fill: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes showStyky {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0)
   }
 }
 /* /header */
