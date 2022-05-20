@@ -27,6 +27,10 @@
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0px 2px 8px 1px rgba(79, 77, 77, 0.1);
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 0px 2px 8px 3px rgba(79, 77, 77, 0.2);
+    }
   }
   &__pagination {
     position: static;
