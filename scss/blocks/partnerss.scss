@@ -1,6 +1,6 @@
 /* partners */
 .partners { 
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   position: relative;
   .title {
     margin-bottom: 14px;
@@ -36,6 +36,9 @@
     position: static;
     .swiper-pagination-bullet {
       border-color: #cecece;
+      &:hover {
+        border-color: $red;
+      }
     }
   }
   &__arrow {
