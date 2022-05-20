@@ -15,9 +15,42 @@ window.onload = () => {
     },
     speed: 1500,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.welcome__pagination',
       clickable: true,
     },
+  });
+
+  const partnersSlider = new Swiper('#partnersSlider', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    grid: {
+      rows: 2,
+    },
+    pagination: {
+      el: '.partners__pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.partners__arrow--next',
+      prevEl: '.partners__arrow--prev',
+      disabledClass: 'none',
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        grid: {
+          rows: 2,
+        },
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        grid: {
+          rows: 2,
+        },
+      }
+    }
   });
 
   // Каталог под меню
