@@ -8798,13 +8798,26 @@ a:hover {
   z-index: 3;
 }
 .banner__title {
+  padding-left: 13px;
   font-size: 30px;
   color: #fff;
   font-weight: bold;
   margin-bottom: 20px;
+  position: relative;
+}
+.banner__title:after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 90%;
+  background-color: #db0909;
+  position: absolute;
+  top: 2px;
+  left: 0;
 }
 .banner__btn .btn {
   padding: 10px 30px;
+  border-color: transparent;
 }
 .banner__img {
   max-width: 100%;
