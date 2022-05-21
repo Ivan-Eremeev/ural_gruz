@@ -1,0 +1,127 @@
+extends core/base.pug
+
+block title 
+  title Справочная информация
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // main 
+      .main 
+
+        .main__img 
+          img(src="img/main_bg.jpg", alt="")
+
+        .container
+
+          aside.main__menu 
+
+            include blocks/subcatalog.pug
+
+          main.main__content.main__content--padding-small
+
+            // breadcrambs
+            .breadcrambs
+              ul 
+                li 
+                  a(href="#") Главная
+            //	/breadcrambs
+
+            // reference
+            .reference
+              .subtitle Справочная информация о грузоподъемном оборудовании и механизмах
+              .reference__categories 
+                ul 
+                  li 
+                    a(href="#").active Тали
+                  li 
+                    a(href="#") Стропы
+                  li 
+                    a(href="#") Лебедки
+                  li 
+                    a(href="#") Домкраты
+                  li 
+                    a(href="#") Блоки
+                  li 
+                    a(href="#") Захваты
+                  li 
+                    a(href="#") Тележки
+                  li 
+                    a(href="#") Штабелеры
+              .reference__articles 
+                .row.gy-3
+                  .col-md-4.col-sm-6 
+                    .reference__item 
+                      a(href="#").reference__img 
+                        img(src="img/reference_01.jpg", alt="")
+                      a(href="#").reference__title Как снять подшипник с вала?
+                      .reference__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                        a(href="#").reference__after 
+                  .col-md-4.col-sm-6 
+                    .reference__item 
+                      a(href="#").reference__img 
+                        img(src="img/reference_02.jpg", alt="")
+                      a(href="#").reference__title Технические характеристики автомобильной лебёдки
+                      .reference__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        a(href="#").reference__after 
+                  .col-md-4.col-sm-6 
+                    .reference__item 
+                      a(href="#").reference__img 
+                        img(src="img/reference_03.jpg", alt="")
+                      a(href="#").reference__title Подъем грузов лебедкой
+                      .reference__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                        a(href="#").reference__after 
+                  .col-md-4.col-sm-6 
+                    .reference__item 
+                      a(href="#").reference__img 
+                        img(src="img/reference_01.jpg", alt="")
+                      a(href="#").reference__title Как снять подшипник с вала?
+                      .reference__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                        a(href="#").reference__after 
+                  .col-md-4.col-sm-6 
+                    .reference__item 
+                      a(href="#").reference__img 
+                        img(src="img/reference_02.jpg", alt="")
+                      a(href="#").reference__title Технические характеристики автомобильной лебёдки
+                      .reference__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        a(href="#").reference__after 
+                  .col-md-4.col-sm-6 
+                    .reference__item 
+                      a(href="#").reference__img 
+                        img(src="img/reference_03.jpg", alt="")
+                      a(href="#").reference__title Подъем грузов лебедкой
+                      .reference__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                        a(href="#").reference__after 
+                  .col-md-4.col-sm-6 
+                    .reference__item 
+                      a(href="#").reference__img 
+                        img(src="img/reference_01.jpg", alt="")
+                      a(href="#").reference__title Как снять подшипник с вала?
+                      .reference__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                        a(href="#").reference__after 
+                  .col-md-4.col-sm-6 
+                    .reference__item 
+                      a(href="#").reference__img 
+                        img(src="img/reference_02.jpg", alt="")
+                      a(href="#").reference__title Технические характеристики автомобильной лебёдки
+                      .reference__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        a(href="#").reference__after 
+                  .col-md-4.col-sm-6 
+                    .reference__item 
+                      a(href="#").reference__img 
+                        img(src="img/reference_03.jpg", alt="")
+                      a(href="#").reference__title Подъем грузов лебедкой
+                      .reference__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                        a(href="#").reference__after 
+            //	/reference
+
+            include blocks/banner.pug
+
+      //	/main 
+
+    include core/footer.pug

@@ -1,0 +1,102 @@
+/* reference */
+.reference { 
+  .subtitle {
+    margin-bottom: 25px;
+  }
+  &__categories {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 35px;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -20px;
+      margin-top: -10px;
+      li {
+        margin-left: 20px;
+        margin-top: 10px;
+        a {
+          display: block;
+          padding: 6px 13px;
+          border: 1px solid #e3e3e3;
+          border-radius: 4px;
+          &.active {
+            background-color: $red;
+            color: #fff;
+            border-color: $red;
+          }
+        }
+      }
+    }
+  }
+  &__articles {
+    margin-bottom: 30px;
+  }
+  &__item {
+    height: 100%;
+    padding: 18px 20px 16px;
+  }
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 108px;
+    margin-bottom: 23px;
+    img {
+      max-height: 100%;
+    }
+  }
+  &__title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 90%;
+      background-color: $red;
+      border-radius: 10px;
+      position: absolute;
+      top: 2px;
+      left: 0;
+    }
+  }
+  &__text {
+    max-height: 114px;
+    overflow: hidden;
+    font-weight: 300;
+    line-height: 23px;
+    position: relative;
+  }
+  &__after {
+    display: block;
+    width: 133px;
+    height: 19px;
+    background-image: linear-gradient(90.0deg, rgba(255, 255, 255, 0.0) 0%, #ffffff 100%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    &:after {
+      content: '';
+      display: block;
+      background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 492.004 492.004' fill='%23333'%3E%3Cpath d='M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z'/%3E%3C/svg%3E");
+      width: 13px;
+      height: 13px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 3px;
+      right: 0;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__item {
+      padding: 10px;
+    }
+  }
+}
+/* /reference */
