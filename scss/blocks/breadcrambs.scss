@@ -1,0 +1,30 @@
+/* breadcrambs */
+.breadcrambs { 
+  margin-bottom: 20px;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      &:not(:last-child) {
+        padding-right: 10px;
+        margin-right: 10px;
+        position: relative;
+        &:after {
+          content: '';
+          display: block;
+          height: 18px;
+          width: 2px;
+          background-color: #777777;
+          position: absolute;
+          top: 2px;
+          right: 0;
+        }
+      }
+      a {
+        color: $red;
+        border-bottom: 1px solid $red;
+      }
+    }
+  }
+}
+/* /breadcrambs */

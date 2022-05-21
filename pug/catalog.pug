@@ -1,0 +1,173 @@
+extends core/base.pug
+
+block title 
+  title Каталог
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // main 
+      .main 
+
+        .main__img 
+          img(src="img/main_bg.jpg", alt="")
+
+        .container
+
+          aside.main__menu 
+
+            include blocks/subcatalog.pug
+
+          main.main__content.main__content--padding-small
+
+            // breadcrambs
+            .breadcrambs
+              ul 
+                li 
+                  a(href="#") Главная
+            //	/breadcrambs
+
+            // catalog-section
+            .catalog-section
+              .subtitle Грузоподъёмное оборудование
+              .row.gy-3 
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_1.jpg", alt="")
+                    .catalog-section__title Стропы
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_2.jpg", alt="")
+                    .catalog-section__title Ремни стяжные, буксирвочные
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_3.jpg", alt="")
+                    .catalog-section__title Тали ручные
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_4.jpg", alt="")
+                    .catalog-section__title Тали электрические
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_5.jpg", alt="")
+                    .catalog-section__title Лебедки ручные
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_6.jpg", alt="")
+                    .catalog-section__title Лебедки электрические
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_7.jpg", alt="")
+                    .catalog-section__title Домкраты
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_8.jpg", alt="")
+                    .catalog-section__title Блоки монтажные
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_9.jpg", alt="")
+                    .catalog-section__title Захваты
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_10.jpg", alt="")
+                    .catalog-section__title Весы крановые
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_11.jpg", alt="")
+                    .catalog-section__title Тележки для талей
+            //	/catalog-section
+
+            // catalog-section
+            .catalog-section
+              .subtitle Комплектующие для строп и такелаж
+              .row.gy-3 
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_12.jpg", alt="")
+                    .catalog-section__title Комплектующие для текстильных строп
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_13.jpg", alt="")
+                    .catalog-section__title Комплектующие для цепных строп
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_14.jpg", alt="")
+                    .catalog-section__title Комплектующие для канатных строп
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_15.jpg", alt="")
+                    .catalog-section__title Стяжные механизмы
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_16.jpg", alt="")
+                    .catalog-section__title Прочие комплектующие
+            //	/catalog-section
+
+            // catalog-section
+            .catalog-section
+              .subtitle Складская техника
+              .row.gy-3 
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_17.jpg", alt="")
+                    .catalog-section__title Штабелеры
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_18.jpg", alt="")
+                    .catalog-section__title Тележки складские
+            //	/catalog-section
+
+            // catalog-section
+            .catalog-section
+              .subtitle Колеса и колесные опоры
+              .row.gy-3 
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_19.jpg", alt="")
+                    .catalog-section__title Колесные опоры
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_19.jpg", alt="")
+                    .catalog-section__title Колеса
+            //	/catalog-section
+
+            // banner
+            .banner
+              .banner__bg 
+                img(src="img/banner_bg.jpg", alt="")
+              .banner__content 
+                .banner__title Качественное оборудование от надежного поставщика!
+                .banner__btn 
+                  a(href="#").btn.btn--white Консультация по сервису
+              .banner__img 
+                img(src="img/banner.png", alt="")
+            //	/banner
+
+      //	/main 
+
+    include core/footer.pug

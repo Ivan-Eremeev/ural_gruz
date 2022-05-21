@@ -3,6 +3,7 @@
   position: relative;
   .container {
     display: flex;
+    align-items: flex-start;
   }
   &__img {
     height: 455px;
@@ -10,19 +11,38 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: -1;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
+    &:after {
+      content: '';
+      display: block;
+      background: linear-gradient(to bottom, #1E1E1E, rgba(30, 30, 30, .9) 50%, rgba(30, 30, 30, .6));
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
   &__menu {
     width: 25%;
+    .subcatalog {
+      height: 455px;
+    }
   }
   &__content {
     width: 75%;
     padding: 28px 30px 19px;
+    background-color: #fff;
+    &--padding-small {
+      padding: 15px 30px;
+    }
   }
   @include media-breakpoint-down(lg) {
     &__menu {
@@ -31,6 +51,9 @@
     &__content {
       width: 100%;
       padding: 20px 0;
+      &--padding-small {
+        padding: 15px;
+      }
     }
   }
 }
