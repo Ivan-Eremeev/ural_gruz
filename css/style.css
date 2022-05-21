@@ -8143,6 +8143,7 @@ a:hover {
   max-width: 825px;
   margin-left: auto;
   background-color: #fff;
+  border: 1px solid #e3e3e3;
 }
 .search__input {
   position: relative;
