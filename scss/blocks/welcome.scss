@@ -2,6 +2,7 @@
 .welcome { 
   position: relative;
   color: #fff;
+  overflow: hidden;
   .container {
     display: flex;
   }
@@ -34,6 +35,9 @@
   &__content {
     width: 75%;
     padding: 28px 30px 19px;
+    &--padding-small {
+      padding: 15px 30px;
+    }
   }
   &__slider {
     overflow: hidden;
@@ -133,6 +137,48 @@
       color: #fff;
     }
   }
+  &__delivery {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__delivery-content {
+    max-width: 480px;
+    margin-right: 20px;
+  }
+  &__delivery-title {
+    padding-left: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      width: 3px;
+      height: 90%;
+      background-color: $red;
+      border-radius: 10px;
+      position: absolute;
+      top: 2px;
+      left: 0;
+    }
+  }
+  &__delivery-text {
+    line-height: 23px;
+    font-weight: 300;
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  &__delivery-img {
+    max-width: 490px;
+    margin-right: -190px;
+    margin-top: -30px;
+    img {
+
+    }  
+  }
   @include media-breakpoint-down(xl) {
     &__slider-title {
       font-size: 30px;
@@ -142,6 +188,9 @@
     }
     &__slider-price {
       font-size: 20px;
+    }
+    &__delivery-content {
+      max-width: 370px;
     }
   }
   @include media-breakpoint-down(lg) {
@@ -164,6 +213,15 @@
     &__slider-banner {
       padding-right: 30px;
     }
+    &__delivery-content {
+      max-width: 300px;
+    }
+    &__delivery-title {
+      font-size: 24px;
+    }
+    &__delivery-text {
+      font-size: 14px;
+    }
   }
   @include media-breakpoint-down(sm) {
     &__slider-title {
@@ -174,6 +232,22 @@
     }
     &__slider-content {
       padding: 10px;
+    }
+    &__delivery {
+      display: block;
+      max-width: none;
+    }
+    &__delivery-content {
+      max-width: none;
+      margin-right: 0;
+    }
+    &__delivery-img {
+      margin-top: 20px;
+      margin-right: 0;
+      text-align: center;
+      img {
+        width: 80%;
+      }
     }
   }
 }

@@ -1,0 +1,101 @@
+extends core/base.pug
+
+block title 
+  title Главная
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // welcome
+      .welcome
+        .container 
+
+          .welcome__img 
+            img(src="img/main_bg.jpg", alt="")
+
+          .welcome__menu 
+
+            include blocks/subcatalog.pug
+            
+          .welcome__content.welcome__content--padding-small
+
+            // breadcrambs
+            .breadcrambs
+              ul 
+                li 
+                  a(href="#") Главная
+            //	/breadcrambs
+
+            .welcome__delivery
+              .welcome__delivery-content
+                .welcome__delivery-title Доставка и оплата
+                .welcome__delivery-text 
+                  p Междугородняя доставка по всей территории России и странам Таможенного союза.
+                  p Мы делаем все возможное,  чтобы  работа с нами была максимально комфортной для вас. Грузоподъемное оборудование , которое Вы приобретаете в компании «Грузовая Механика» мы доставим до транспортной компании в любом регионе России бесплатно
+              .welcome__delivery-img
+                img(src="img/truck.png", alt="")
+      //	/welcome
+
+      // main 
+      .main 
+
+        .container
+
+          aside.main__menu 
+
+          main.main__content 
+
+            // delivery
+            .delivery
+              .delivery__typotext
+                p «Грузовая механика» работает с крупнейшими транспортными компаниями России:
+                ul 
+                  li Деловые линии
+                  li Ратэк
+                  li Байкал авто
+                  li Байкал сервис
+                  li СДЭК
+                  li ПЭК
+                  li КИТ
+                  li ЦАП
+                  li Транскарго
+                  li Экспресс Авто
+                p Сообщите менеджеру наиболее удобную для вас транспортную компанию и мы отправим Вам груз сразу после оформления заявки.
+              .delivery__item 
+                .delivery__head 
+                  .delivery__icon 
+                    img(src="img/box.png", alt="")
+                  span Самовывоз со склада
+                .delivery__text Для экономии времени вы можете забрать товар самостоятельно со склада любого из наших филиалов.
+              .delivery__item 
+                .delivery__head 
+                  .delivery__icon 
+                    img(src="img/noun_money.png", alt="")
+                  span Оплата
+                .delivery__text 
+                  p Вы можете выбрать наиболее удобный для вас способ оплаты товара:
+                  p Оплата по счету - перечисление денежных средств на расчетный счет компании (для юр. лиц)
+              .delivery__item 
+                .delivery__head 
+                  .delivery__icon 
+                    img(src="img/noun_wallet.png", alt="")
+                  span Перевод на банковскую карту
+                .delivery__text Способы оплаты:  Банковской картой. Для выбора оплаты товара с помощью банковской карты на соответствующей странице Мои заказы в личном кабинете, после оформления заказа необходимо нажать кнопку «Оплатить». Оплата происходит через ПАО СБЕРБАНК с использованием Банковских карт следующих платежных систем:  МИР, VISA International, Mastercard Worldwide)
+              .delivery__item 
+                .delivery__head 
+                  .delivery__icon 
+                    img(src="img/return.png", alt="")
+                  span Возврат товара
+                .delivery__text Срок возврата товара надлежащего качества составляет 30 дней с момента получения товара. Возврат переведенных средств, производится на Ваш банковский счет в течение 5—30 рабочих дней (срок зависит от Банка, который выдал Вашу банковскую карту).
+            //	/delivery
+
+            include blocks/banner.pug
+
+      //	/main 
+
+    include core/footer.pug
