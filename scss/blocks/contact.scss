@@ -1,0 +1,71 @@
+/* contact */
+.contact { 
+  margin-bottom: 20px;
+  .subtitle {
+    margin-bottom: 23px;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  &__content {
+    width: 47%;
+    padding-right: 30px;
+  }
+  &__title {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f4f4f4;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  &__list {
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+        margin-top: 18px;
+        a {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }  
+  }
+  &__map {
+    width: 53%;
+    min-height: 250px;
+    #yandexMap {
+      height: 100%;
+    }
+  }
+  &__ps {
+    display: flex;
+  }
+  &__ps-icon {
+    flex-shrink: 0;
+    margin-right: 23px;
+    margin-top: 2px;
+  }
+  &__ps-text {
+    a {
+      color: $red;
+      text-decoration: underline;
+    }
+  }
+  &__tel {
+    font-weight: 500;
+  }
+  @include media-breakpoint-down(md) {
+    &__content {
+      width: 100%;
+      margin-bottom: 20px;
+      padding-right: 0;
+    }
+    &__map {
+      width: 100%;
+    }
+  }
+}
+/* /contact */

@@ -22,6 +22,12 @@
         a {
           svg {
             fill: #464646;
+            transition: 0.3s;
+          }
+        }
+        &:hover {
+          svg {
+            fill: #fff;
           }
         }
       }
