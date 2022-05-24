@@ -1,0 +1,163 @@
+.modal {
+	background-color: rgba(0,0,0,0.8);
+	transition: 0.3s;
+	&-dialog {
+		max-width: 730px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	&-content {
+		position: relative;
+		background: transparent;
+		border: none;
+	}
+	&_close {
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: -40px;
+		right: 0;
+		cursor: pointer;
+		user-select: none;
+		&:after,&:before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+		&:after {
+			transform: translate(-50%,-50%) rotate(45deg);
+		}
+		&:before {
+			transform: translate(-50%,-50%) rotate(-45deg);
+		}
+	}
+	&__slider-wrap {
+		position: relative;
+		margin-bottom: 20px;
+	}
+	&__slider {
+		overflow: hidden;
+	}
+	&__img {
+		position: relative;
+		cursor: pointer;
+		user-select: none;
+		background-color: #fff;
+		&:after {
+			content: '';
+			display: block;
+			padding-top: 56.25%;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			opacity: 0.6;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		iframe {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	&__slider-nav {
+		width: 360px;
+		margin-left: auto;
+		margin-right: auto;
+		overflow: hidden;
+		.swiper-slide {
+			width: auto;
+			border-radius: 5px;
+			overflow: hidden;
+			border: 1px solid #fff;
+			cursor: pointer;
+			user-select: none;
+		}
+		.swiper-slide-thumb-active {
+			border-color: $red;
+			.modal__thumb {
+				img {
+					opacity: 0.6;
+				}
+			}
+		}
+	}
+	&__thumb {
+		width: 65px;
+		height: 60px;
+		background-color: #fff;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__arrow {
+		width: 38px;
+		height: 38px;
+		background-color: #fff;
+		border-radius: 100%;
+		transition: 0.3s;
+		&:after {
+			font-size: 18px;
+			font-weight: bold;
+			color: $black;
+			transition: 0.3s;
+		}
+		&--prev {
+			left: -50px;
+			&:after {
+				transform: translate(-1px,0);
+			}
+		}
+		&--next {
+			right: -50px;
+			&:after {
+				transform: translate(1px, 0);
+			}
+		}
+		&:hover {
+			background-color: $red;
+			&:after {
+				color: #fff;
+			}
+		}
+	}
+	@include media-breakpoint-down(lg) {
+		&-dialog {
+			max-width: 600px;
+		}
+	}
+	@include media-breakpoint-up(md) {
+		&__thumb {
+			&:hover {
+				img {
+					opacity: 0.6;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-down(md) {
+		&__arrow {
+			display: none;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		&__slider-wrap {
+			margin-bottom: 10px;
+		}
+		&__slider-nav {
+			width: 300px;
+		}
+	}
+}

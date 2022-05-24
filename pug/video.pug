@@ -1,0 +1,212 @@
+extends core/base.pug
+
+block title 
+  title Новости
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // main 
+      .main 
+
+        .main__img 
+          img(src="img/main_bg.jpg", alt="")
+
+        .container
+
+          aside.main__menu 
+
+            include blocks/subcatalog.pug
+
+          main.main__content.main__content--padding-small
+
+            // breadcrambs
+            .breadcrambs
+              ul 
+                li 
+                  a(href="#") Главная
+            //	/breadcrambs
+
+            // news-page
+            .news-page
+              .subtitle Видео
+              .news-page__items 
+                .row.gy-3
+                  .col-md-12.col-sm-6 
+                    .news-page__item 
+                      a(href="#" data-slide-to="0" data-bs-toggle="modal" data-bs-target="#videoModal").news-page__img.news-page__img--opacity.modal-trigger
+                        img(src="img/thumb_01.jpg", alt="")
+                        .video-section__play 
+                          .video-section__play-triangle 
+                      .news-page__content 
+                        .news-page__date 01.09.2021
+                        a(href="#" data-slide-to="0" data-bs-toggle="modal" data-bs-target="#videoModal").news-page__title.modal-trigger Быстрая доставка!
+                        .news-page__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                  .col-md-12.col-sm-6 
+                    .news-page__item 
+                      a(href="#" data-slide-to="1" data-bs-toggle="modal" data-bs-target="#videoModal").news-page__img.news-page__img--opacity.modal-trigger
+                        img(src="img/thumb_02.jpg", alt="")
+                        .video-section__play 
+                          .video-section__play-triangle 
+                      .news-page__content 
+                        .news-page__date 01.09.2021
+                        a(href="#" data-slide-to="1" data-bs-toggle="modal" data-bs-target="#videoModal").news-page__title.modal-trigger Cкладская техника
+                        .news-page__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                  .col-md-12.col-sm-6 
+                    .news-page__item 
+                      a(href="#" data-slide-to="2" data-bs-toggle="modal" data-bs-target="#videoModal").news-page__img.news-page__img--opacity.modal-trigger
+                        img(src="img/thumb_03.jpg", alt="")
+                        .video-section__play 
+                          .video-section__play-triangle 
+                      .news-page__content 
+                        .news-page__date 01.09.2021
+                        a(href="#" data-slide-to="2" data-bs-toggle="modal" data-bs-target="#videoModal").news-page__title.modal-trigger Оплата и доставка
+                        .news-page__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                  .col-md-12.col-sm-6 
+                    .news-page__item 
+                      a(href="#" data-slide-to="3" data-bs-toggle="modal" data-bs-target="#videoModal").news-page__img.news-page__img--opacity.modal-trigger
+                        img(src="img/thumb_01.jpg", alt="")
+                        .video-section__play 
+                          .video-section__play-triangle 
+                      .news-page__content 
+                        .news-page__date 01.09.2021
+                        a(href="#" data-slide-to="3" data-bs-toggle="modal" data-bs-target="#videoModal").news-page__title.modal-trigger Быстрая доставка!
+                        .news-page__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                  .col-md-12.col-sm-6 
+                    .news-page__item 
+                      a(href="#" data-slide-to="4" data-bs-toggle="modal" data-bs-target="#videoModal").news-page__img.news-page__img--opacity.modal-trigger
+                        img(src="img/thumb_02.jpg", alt="")
+                        .video-section__play 
+                          .video-section__play-triangle 
+                      .news-page__content 
+                        .news-page__date 01.09.2021
+                        a(href="#" data-slide-to="4" data-bs-toggle="modal" data-bs-target="#videoModal").news-page__title.modal-trigger Cкладская техника
+                        .news-page__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                  .col-md-12.col-sm-6 
+                    .news-page__item 
+                      a(href="#" data-slide-to="5" data-bs-toggle="modal" data-bs-target="#videoModal").news-page__img.news-page__img--opacity.modal-trigger
+                        img(src="img/thumb_03.jpg", alt="")
+                        .video-section__play 
+                          .video-section__play-triangle 
+                      .news-page__content 
+                        .news-page__date 01.09.2021
+                        a(href="#" data-slide-to="5" data-bs-toggle="modal" data-bs-target="#videoModal").news-page__title.modal-trigger Оплата и доставка
+                        .news-page__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+            //	/news-page
+
+            // pagination
+            .pagination
+              ul 
+                li 
+                  a(href="#").disable
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 492.004 492.004" fill="none">
+                      <path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
+                    </svg>
+                li 
+                  a(href="#").active 1
+                li 
+                  a(href="#") 2
+                li 
+                  a(href="#") 3
+                li 
+                  a(href="#") 4
+                li 
+                  a(href="#") 5
+                li 
+                  a(href="#") 6
+                li 
+                  a(href="#") 7
+                li 
+                  a(href="#") 
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 492.004 492.004" fill="none">
+                      <path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
+                    </svg>
+            //	/pagination
+
+            include blocks/banner.pug
+
+      //	/main 
+
+      // modal bootstrap
+      .modal.fade#videoModal
+          .modal-dialog.modal-dialog-centered
+            .modal-content
+              .modal__slider-wrap
+                .modal__slider#modalSlider
+                  .swiper-wrapper 
+                    .swiper-slide 
+                      .modal__video.js-youtube#hT9htqypkJA
+                        .modal__img.video-img
+                          img(src="img/thumb_01.jpg", alt="")
+                          .video-section__play.video-section__play--big 
+                            .video-section__play-triangle 
+                          .video-iframe 
+                    .swiper-slide 
+                      .modal__video.js-youtube#hT9htqypkJA
+                        .modal__img.video-img
+                          img(src="img/thumb_02.jpg", alt="")
+                          .video-section__play.video-section__play--big 
+                            .video-section__play-triangle 
+                          .video-iframe 
+                    .swiper-slide 
+                      .modal__video.js-youtube#hT9htqypkJA
+                        .modal__img.video-img
+                          img(src="img/thumb_03.jpg", alt="")
+                          .video-section__play.video-section__play--big 
+                            .video-section__play-triangle 
+                          .video-iframe 
+                    .swiper-slide 
+                      .modal__video.js-youtube#hT9htqypkJA
+                        .modal__img.video-img
+                          img(src="img/thumb_01.jpg", alt="")
+                          .video-section__play.video-section__play--big 
+                            .video-section__play-triangle 
+                          .video-iframe 
+                    .swiper-slide 
+                      .modal__video.js-youtube#hT9htqypkJA
+                        .modal__img.video-img
+                          img(src="img/thumb_02.jpg", alt="")
+                          .video-section__play.video-section__play--big 
+                            .video-section__play-triangle 
+                          .video-iframe 
+                    .swiper-slide 
+                      .modal__video.js-youtube#hT9htqypkJA
+                        .modal__img.video-img
+                          img(src="img/thumb_03.jpg", alt="")
+                          .video-section__play.video-section__play--big 
+                            .video-section__play-triangle 
+                          .video-iframe 
+
+                .modal__arrow.modal__arrow--prev.swiper-button-prev
+                .modal__arrow.modal__arrow--next.swiper-button-next
+
+              .modal__slider-nav#modalSliderNav
+                .swiper-wrapper 
+                  .swiper-slide 
+                    .modal__thumb 
+                      img(src="img/thumb_01.jpg", alt="")
+                  .swiper-slide 
+                    .modal__thumb 
+                      img(src="img/thumb_02.jpg", alt="")
+                  .swiper-slide 
+                    .modal__thumb 
+                      img(src="img/thumb_03.jpg", alt="")
+                  .swiper-slide 
+                    .modal__thumb 
+                      img(src="img/thumb_01.jpg", alt="")
+                  .swiper-slide 
+                    .modal__thumb 
+                      img(src="img/thumb_02.jpg", alt="")
+                  .swiper-slide 
+                    .modal__thumb 
+                      img(src="img/thumb_03.jpg", alt="")
+                  
+              .modal_close(data-bs-dismiss="modal")
+      // /modal bootstrap
+
+    include core/footer.pug

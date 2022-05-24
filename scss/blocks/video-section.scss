@@ -67,6 +67,20 @@
         transform: translate(-50%, -50%) scale(1.2);
       }
     }
+    &--big {
+      .video-section__play-triangle {
+        width: 118px;
+        height: 118px;
+      }
+      &:before {
+        width: 137px;
+        height: 137px;
+      }
+      &:after {
+        width: 158px;
+        height: 158px;
+      }
+    }
   }
   &__play-triangle {
     width: 50px;
@@ -74,6 +88,26 @@
     background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 16 20' fill='%23db0909'%3E%3Cpath d='M8,0C3.6,0,0,3.6,0,8s3.6,8,8,8s8-3.6,8-8S12.4,0,8,0z M10.6,8.2l-3.9,2.2c-0.1,0.1-0.3,0-0.3-0.1c0,0,0-0.1,0-0.1V5.8c0-0.1,0.1-0.3,0.2-0.3c0,0,0.1,0,0.1,0l3.9,2.2C10.7,7.9,10.7,8,10.6,8.2C10.6,8.2,10.6,8.2,10.6,8.2z'/%3E%3C/svg%3E");
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  @include media-breakpoint-down(sm) {
+    &__play {
+      &--big {
+        .video-section__play-triangle {
+          width: 50px;
+          height: 50px;
+        }
+    
+        &:before {
+          width: 57px;
+          height: 57px;
+        }
+    
+        &:after {
+          width: 65px;
+          height: 65px;
+        }
+      }
+    }
   }
 }
 /* /video-section */

@@ -52,6 +52,38 @@ window.onload = () => {
       }
     }
   });
+  
+  const modalSliderNav = new Swiper('#modalSliderNav', {
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    freeMode: true,
+    breakpoints: {
+      576: {
+        spaceBetween: 30,
+      },
+    }
+  });
+  const modalSlider = new Swiper('#modalSlider', {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.modal__arrow--next',
+      prevEl: '.modal__arrow--prev',
+      disabledClass: 'none',
+    },
+    thumbs: {
+      swiper: modalSliderNav,
+    },
+  });
+
+  // Переход к слайду по индексу
+  function sildeTo(slider) {
+    const trigger = $('[data-slide-to]');
+    trigger.on('click', function () {
+      const index = $(this).data('slide-to');
+      slider.slideTo(index);
+    })
+  }
+  sildeTo(modalSlider);
 
   // Каталог под меню
   function subcatalog() {
@@ -197,5 +229,49 @@ window.onload = () => {
     }
   }
   stikyMenu();
+
+  // Видео youtube для страницы
+  function uploadYoutubeVideo() {
+    if ($(".js-youtube")) {
+
+      let noToggle = true;
+
+      $('.video-img').on('click', function () {
+        // создаем iframe со включенной опцией autoplay
+        let wrapp = $(this).closest('.js-youtube'),
+          videoId = wrapp.attr('id'),
+          iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
+
+        if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
+
+        // Высота и ширина iframe должны быть такими же, как и у родительского блока
+        let iframe = $('<iframe/>', {
+          'frameborder': '0',
+          'src': iframe_url,
+          'allow': "autoplay"
+        })
+
+        // Заменяем миниатюру HTML5 плеером с YouTube
+        if (noToggle) {
+          $(this).find('.video-iframe').append(iframe);
+          noToggle = false;
+        }
+
+        // Закрыть видео при переключении слайдера
+        modalSlider.on('slideChange', function () {
+          $('.video-iframe iframe').remove();
+          noToggle = true;
+        });
+
+        // Закрыть видео при закрытии модального окна
+        $('#videoModal').on('hide.bs.modal', function () {
+          $('.video-iframe iframe').remove();
+          noToggle = true;
+        });
+
+      });
+    }
+  };
+  uploadYoutubeVideo();
 
 }
