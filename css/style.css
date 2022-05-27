@@ -8549,6 +8549,11 @@ a:hover {
 .main__content--padding-small {
   padding: 15px 30px;
 }
+@media (min-width: 576px) {
+  .main__content {
+    min-height: 455px;
+  }
+}
 @media (max-width: 991.98px) {
   .main__menu {
     display: none;

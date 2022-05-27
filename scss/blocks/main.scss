@@ -44,6 +44,11 @@
       padding: 15px 30px;
     }
   }
+  @include media-breakpoint-up(sm) {
+    &__content {
+      min-height: 455px;
+    }
+  }
   @include media-breakpoint-down(lg) {
     &__menu {
       display: none;
