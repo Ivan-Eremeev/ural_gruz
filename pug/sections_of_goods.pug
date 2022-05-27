@@ -1,0 +1,125 @@
+extends core/base.pug
+
+block title 
+  title Разделы товаров
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // main 
+      .main 
+
+        .main__img 
+          img(src="img/main_bg.jpg", alt="")
+
+        .container
+
+          aside.main__menu 
+
+            include blocks/subcatalog.pug
+
+          main.main__content.main__content--padding-small
+
+            // breadcrambs
+            .breadcrambs
+              ul 
+                li 
+                  a(href="#") Главная
+                li 
+                  a(href="#") Каталог продукции
+            //	/breadcrambs
+
+            // catalog-section
+            .catalog-section
+              .subtitle Грузоподъёмное оборудование
+              .row.gy-3 
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/sibtal.jpg", alt="")
+                    .catalog-section__title Стропы текстильные CТП
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_20.jpg", alt="")
+                    .catalog-section__title Стропы текстильные грузовые
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/sibtal.jpg", alt="")
+                    .catalog-section__title Стропы текстильные CТП
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/sibtal.jpg", alt="")
+                    .catalog-section__title Стропы текстильные CТП
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/catalog_20.jpg", alt="")
+                    .catalog-section__title Стропы текстильные грузовые
+                .col-md-4.col-sm-6 
+                  a(href="#").catalog-section__item 
+                    .catalog-section__img 
+                      img(src="img/sibtal.jpg", alt="")
+                    .catalog-section__title Стропы текстильные CТП
+            //	/catalog-section
+
+            // texteditor
+            .texteditor
+              p Грузоподъемные стропы - это многофункциональные вспомогательные приспособления, с помощью которых можно фиксировать, подвешивать и перемещать различные грузы. Они нашли широкое применение в строительной сфере, в быту, а также на различных промышленных предприятиях. С их помощью существенно упрощается процесс погрузочно-разгрузочных работ любого типа.
+              h2 Основные разновидности строп
+              ol 
+                li Текстильные.
+                  span Наиболее распространенный вариант. Отличаются своей гибкостью и небольшим весом, устойчивы к воздействию влаги и солнечных лучей, не боятся температурных перепадов. Недостатки: огнеопасность, низкая сопротивляемость химическим веществам и невозможность работать с объектами, у которых острая кромка.
+                li Канатные (сплетенный стальной канат).
+                  span Предназначены для поднятия тяжеловесных грузов. Отличаются повышенной надежностью.
+                li Цепные.
+                  span Состоят из металлических звеньев. Самые прочные и самые дорогие по сравнению с остальными.
+              mark
+                h3 Важно!
+                p Перед началом проведения грузоподъемных работ необходимо провести тщательный осмотр оснащения: при наличии порезов, разрывов и прочих дефектов эксплуатация приспособлений запрещена.
+              p Приобретайте товары только от проверенных брендов. Качество производства напрямую влияет на срок службы и безопасность грузоподъемных работ
+              h2 Основные преимущества изделий
+              ul 
+                li повышенная гибкость;
+                li простота эксплуатации;
+                li безопасность (все наши товары проходят лабораторные испытания и соответствуют Техническому регламенту Таможенного союза)
+              p Реализуемые нами грузоподъемные стропы дают возможность работать с негабаритными и тяжеловесными грузами любого типа.
+            //	/texteditor
+
+            // section-goods
+            .section-goods
+              .section-goods__row 
+                .section-goods__col 
+                  a(href="#").section-goods__item 
+                    .section-goods__img 
+                      img(src="img/catalog_20.jpg", alt="")
+                    .section-goods__title Стропы текстильные петлевые
+                .section-goods__col 
+                  a(href="#").section-goods__item 
+                    .section-goods__img 
+                      img(src="img/catalog_20.jpg", alt="")
+                    .section-goods__title Стропы цепные СЦ
+                .section-goods__col 
+                  a(href="#").section-goods__item 
+                    .section-goods__img 
+                      img(src="img/catalog_20.jpg", alt="")
+                    .section-goods__title Стропы канатные петлевые
+                .section-goods__col 
+                  a(href="#").section-goods__item 
+                    .section-goods__img 
+                      img(src="img/catalog_20.jpg", alt="")
+                    .section-goods__title Стропы канатные петлевые
+            //	/section-goods
+
+            include blocks/banner.pug
+
+      //	/main 
+
+    include core/footer.pug

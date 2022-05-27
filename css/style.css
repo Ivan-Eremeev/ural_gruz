@@ -10311,6 +10311,35 @@ a:hover {
   top: 6px;
   left: 0;
 }
+.texteditor mark {
+  display: block;
+  padding: 10px 30px;
+  margin: 30px 0;
+  background-color: #f6f5f5;
+  position: relative;
+}
+.texteditor mark h1, .texteditor mark h2, .texteditor mark h3, .texteditor mark h4, .texteditor mark h5, .texteditor mark h6 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.texteditor mark p {
+  position: relative;
+  z-index: 2;
+}
+.texteditor mark:after {
+  content: "";
+  display: block;
+  background-color: transparent;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
 @media (max-width: 575.98px) {
   .texteditor h1, .texteditor h2, .texteditor h3, .texteditor h4, .texteditor h5, .texteditor h6 {
     font-size: 22px;
@@ -10318,3 +10347,77 @@ a:hover {
 }
 
 /* /texteditor */
+/* section-goods */
+.section-goods {
+  margin-bottom: 30px;
+}
+.section-goods__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.section-goods__col {
+  width: 190px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.section-goods__item {
+  display: block;
+  height: 100%;
+  padding: 10px 0 20px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.section-goods__item:hover {
+  -webkit-box-shadow: 0px 2px 8px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 8px 3px rgba(0, 0, 0, 0.2);
+}
+.section-goods__item:hover .section-goods__title {
+  color: #db0909;
+}
+.section-goods__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100px;
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+.section-goods__title {
+  padding-left: 12px;
+  position: relative;
+}
+.section-goods__title:after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 90%;
+  background-color: #db0909;
+  position: absolute;
+  top: 1px;
+  left: 0;
+}
+@media (max-width: 575.98px) {
+  .section-goods__col {
+    width: 100%;
+  }
+}
+
+/* /section-goods */
