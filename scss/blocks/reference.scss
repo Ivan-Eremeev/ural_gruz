@@ -93,9 +93,29 @@
       right: 0;
     }
   }
+  @include media-breakpoint-down(md) {
+    &__categories {
+      ul {
+        margin-left: -10px;
+        li {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
   @include media-breakpoint-down(sm) {
     &__item {
       padding: 10px;
+    }
+    &__categories {
+      ul {
+        margin-left: -5px;
+        margin-top: -5px;
+        li {
+          margin-left: 5px;
+          margin-top: 5px;
+        }
+      }
     }
   }
 }

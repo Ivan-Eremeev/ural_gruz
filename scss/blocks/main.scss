@@ -56,5 +56,10 @@
       }
     }
   }
+  @include media-breakpoint-down(sm) {
+    &__img {
+      display: none;
+    }
+  }
 }
 /* /main */

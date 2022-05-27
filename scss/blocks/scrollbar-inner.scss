@@ -1,0 +1,32 @@
+/* .scrollbar-inner */
+.scrollbar-inner { 
+  padding-right: 1px !important;
+  .scroll-element.scroll-y {
+    width: 4px;
+    right: 0;
+    top: 50%;
+    height: 95%;
+    transform: translate(0,-50%);
+  }
+  .scroll-element.scroll-x {
+    height: 4px;
+    width: 95%;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+  .scroll-element .scroll-element_track {
+    background: transparent;
+    border: 1px solid #e3e3e3;
+  }
+  .scroll-element .scroll-bar {
+    background-color: $red;
+    opacity: 1;
+    &:hover {
+      background-color: $red;
+    }
+  }
+  .scroll-element.scroll-graggable .scroll-bar {
+    background-color: $red;
+  }
+}
+/* /.scrollbar-inner */

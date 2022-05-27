@@ -302,4 +302,7 @@ window.onload = () => {
     }
   } 
 
+  // JQuery Scrollbar
+  $('.scrollbar-inner').scrollbar();
+
 }
