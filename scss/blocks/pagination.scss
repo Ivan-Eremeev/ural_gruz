@@ -22,6 +22,7 @@
         }
         &:hover {
           &:not(.disable) {
+            border-color: $red;
             svg {
               fill: $red;
             }

@@ -1,0 +1,265 @@
+extends core/base.pug
+
+block title 
+  title Фильтр
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // main 
+      .main 
+
+        .main__img 
+          img(src="img/main_bg.jpg", alt="")
+
+        .container
+
+          aside.main__menu 
+
+            include blocks/subcatalog.pug
+
+          main.main__content.main__content--padding-small
+
+            // breadcrambs
+            .breadcrambs
+              ul 
+                li 
+                  a(href="#") Главная
+                li 
+                  a(href="#") Каталог продукции
+            //	/breadcrambs
+
+            // filter
+            .filter
+              .subtitle Лебедка электрическая 0.5т
+              .filter__flex 
+                .filter__title 
+                  <svg version="1.1" width="25" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 52 65" fill="#db0909">
+                    <path d="M13.2,16.8c1.6-1.3,3.4-2.4,5.4-3.2L17.6,9C23,7.5,28.9,7.5,34.4,9l-0.9,4.5c2,0.8,3.8,1.9,5.4,3.2L41.1,6c0.1-0.5-0.2-0.9-0.6-1.1c-2.3-1-4.7-1.7-7.1-2.2C31,2.2,28.5,2,26,2c-5,0-9.9,1-14.5,2.9c-0.5,0.2-0.7,0.7-0.6,1.1L13.2,16.8z"/>
+                    <path d="M26,14.1c-9.9,0-17.9,8-17.9,17.9c0,9.9,8,17.9,17.9,17.9c9.9,0,17.9-8.1,17.9-17.9C43.9,22.2,35.9,14.1,26,14.1zM36.9,33.1c-0.6,0-1-0.4-1-1c0-5.5-4.5-9.9-9.9-9.9c-0.6,0-1-0.4-1-1s0.4-1,1-1c6.6,0,11.9,5.4,11.9,11.9C37.9,32.6,37.5,33.1,36.9,33.1z"/>
+                  </svg>
+                  | Выбрать грузоподъёмность:
+                form(action="#").filter__items 
+                  .filter__items-row 
+                    .filter__item
+                      input#load_0(type="radio" name="load" checked)
+                      label(for="load_0")  0.5 т
+                    .filter__item
+                      input#load_1(type="radio" name="load")
+                      label(for="load_1")  1 т
+                    .filter__item
+                      input#load_2(type="radio" name="load")
+                      label(for="load_2")  2 т
+                    .filter__item
+                      input#load_3(type="radio" name="load")
+                      label(for="load_3")  3 т
+                    .filter__item
+                      input#load_4(type="radio" name="load")
+                      label(for="load_4")  5 т
+                    .filter__item
+                      input#load_5(type="radio" name="load")
+                      label(for="load_5")  0.5 т
+                    .filter__item
+                      input#load_6(type="radio" name="load")
+                      label(for="load_6")  1 т
+                    .filter__item
+                      input#load_7(type="radio" name="load")
+                      label(for="load_7")  2 т
+                    .filter__item
+                      input#load_8(type="radio" name="load")
+                      label(for="load_8")  3 т
+                    .filter__item
+                      input#load_9(type="radio" name="load")
+                      label(for="load_9")  5 т
+                    .filter__item
+                      input#load_10(type="radio" name="load")
+                      label(for="load_10")  0.5 т
+                    .filter__item
+                      input#load_11(type="radio" name="load")
+                      label(for="load_11")  1 т
+                    .filter__item
+                      input#load_12(type="radio" name="load")
+                      label(for="load_12")  2 т
+                    .filter__item
+                      input#load_13(type="radio" name="load")
+                      label(for="load_13")  3 т
+                    .filter__item
+                      input#load_14(type="radio" name="load")
+                      label(for="load_14")  5 т
+                    .filter__item
+                      input#load_15(type="radio" name="load")
+                      label(for="load_15")  0.5 т
+                    .filter__item
+                      input#load_16(type="radio" name="load")
+                      label(for="load_16")  1 т
+                    .filter__item
+                      input#load_17(type="radio" name="load")
+                      label(for="load_17")  2 т
+                    .filter__item
+                      input#load_18(type="radio" name="load")
+                      label(for="load_18")  3 т
+                    .filter__item
+                      input#load_19(type="radio" name="load")
+                      label(for="load_19")  5 т
+              .filter__text Таль ручная рычажная 0,5 т используется для перемещения и удержания груза на заданной высоте массой до 500 кг. Имеет высокий запас прочности. Оборудована рабочим рычагом, надёжным подъёмным механизмом и встроенным тормозом. Комплектуется двумя крюками для размещения на балке и подвешивания груза. Выполнена из качественных материалов и комплектующих.
+            //	/filter
+
+            // product-section
+            .product-section
+              .product-section__item 
+                .product-section__title 
+                  a(href="#") Лебедка электрическая КDC 300 220В 0.3Т-100М
+                .product-section__row 
+                  a(href="#").product-section__img 
+                    img(src="img/catalog_1.jpg", alt="")
+                  .product-section__content 
+                    ul.product-section__list 
+                      li Г/П, Т.: 
+                        span 0,3
+                      li Емкость барабана М.: 
+                        span 60
+                      li Ф каната, ММ: 
+                        span 5,1
+                      li Компл-я канатом: 
+                        span Да
+                      li Скорость, М/С: 
+                        span 0,2
+              .product-section__item 
+                a(href="#").product-section__title Лебедка электрическая КDJ-1000Е1 380В 0.5Т-60М
+                .product-section__row 
+                  a(href="#").product-section__img 
+                    img(src="img/catalog_2.jpg", alt="")
+                  .product-section__content 
+                    ul.product-section__list 
+                      li Г/П, Т.: 
+                        span 0,3
+                      li Емкость барабана М.: 
+                        span 60
+                      li Ф каната, ММ: 
+                        span 5,1
+                      li Компл-я канатом: 
+                        span Да
+                      li Скорость, М/С: 
+                        span 0,2
+              .product-section__item 
+                a(href="#").product-section__title Лебедка электрическая JM 1000K 380В 0.5Т-120М
+                .product-section__row 
+                  a(href="#").product-section__img 
+                    img(src="img/catalog_3.jpg", alt="")
+                  .product-section__content 
+                    ul.product-section__list 
+                      li Г/П, Т.: 
+                        span 0,3
+                      li Емкость барабана М.: 
+                        span 60
+                      li Ф каната, ММ: 
+                        span 5,1
+                      li Компл-я канатом: 
+                        span Да
+                      li Скорость, М/С: 
+                        span 0,2
+              .product-section__item 
+                .product-section__title 
+                  a(href="#") Лебедка электрическая КDC 300 220В 0.3Т-100М
+                .product-section__row 
+                  a(href="#").product-section__img 
+                    img(src="img/catalog_1.jpg", alt="")
+                  .product-section__content 
+                    ul.product-section__list 
+                      li Г/П, Т.: 
+                        span 0,3
+                      li Емкость барабана М.: 
+                        span 60
+                      li Ф каната, ММ: 
+                        span 5,1
+                      li Компл-я канатом: 
+                        span Да
+                      li Скорость, М/С: 
+                        span 0,2
+              .product-section__item 
+                a(href="#").product-section__title Лебедка электрическая КDJ-1000Е1 380В 0.5Т-60М
+                .product-section__row 
+                  a(href="#").product-section__img 
+                    img(src="img/catalog_2.jpg", alt="")
+                  .product-section__content 
+                    ul.product-section__list 
+                      li Г/П, Т.: 
+                        span 0,3
+                      li Емкость барабана М.: 
+                        span 60
+                      li Ф каната, ММ: 
+                        span 5,1
+                      li Компл-я канатом: 
+                        span Да
+                      li Скорость, М/С: 
+                        span 0,2
+              .product-section__item 
+                a(href="#").product-section__title Лебедка электрическая JM 1000K 380В 0.5Т-120М
+                .product-section__row 
+                  a(href="#").product-section__img 
+                    img(src="img/catalog_3.jpg", alt="")
+                  .product-section__content 
+                    ul.product-section__list 
+                      li Г/П, Т.: 
+                        span 0,3
+                      li Емкость барабана М.: 
+                        span 60
+                      li Ф каната, ММ: 
+                        span 5,1
+                      li Компл-я канатом: 
+                        span Да
+                      li Скорость, М/С: 
+                        span 0,2
+
+              .product-section__pagination 
+              
+                a(href="#").product-section__more Показать все товары
+                  <svg version="1.1" width="10" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 492.004 492.004" fill="#db0909">
+                    <path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
+                  </svg>
+
+                .pagination
+                  ul 
+                    li 
+                      a(href="#").disable
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 492.004 492.004" fill="none">
+                          <path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
+                        </svg>
+                    li 
+                      a(href="#").active 1
+                    li 
+                      a(href="#") 2
+                    li 
+                      a(href="#") 3
+                    li 
+                      a(href="#") 4
+                    li 
+                      a(href="#") 5
+                    li 
+                      a(href="#") 6
+                    li 
+                      a(href="#") 7
+                    li 
+                      a(href="#") 
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 492.004 492.004" fill="none">
+                          <path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
+                        </svg>
+
+            //	/product-section
+
+            // texteditor
+            .texteditor
+              p Текстильные стропы стп от торговой марки «СИБТАЛЬ» выполнены строго по Российскому «ГОСТУ» с соблюдением всех требований Российского законодательства. Их стоимость на 20% ниже цветных аналогов, при этом не уступают окрашенным вариантам по качеству и грузоподъемности. Все изделия выполнены из качественной полиэстерной ленты. Они хорошо сопротивляются воздействию влаги, не растягиваются даже при достаточно сильных нагрузках.
+              p Вся продукция проходит испытания на соответствие запаса прочности 7:1. Благодаря этому их использовать можно даже в условиях повышенной влажности. Мы самостоятельно размещаем заказы на производство! Это позволяет выполнять любые запросы, включая пошив нетиповых изделий с усиленной грузоподъемностью и разрывными характеристиками без изменения стоимости товара
+            //	/texteditor
+
+            include blocks/banner.pug
+
+      //	/main 
+
+    include core/footer.pug
