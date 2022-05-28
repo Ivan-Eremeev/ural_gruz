@@ -59,6 +59,14 @@
       }
     }
   }
+  &__mobtel {
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
   @include media-breakpoint-up(md) {
     &__catalog-btn {
       a {
@@ -76,6 +84,9 @@
         }
       }
     }  
+    &__mobtel {
+      display: none;
+    }
   }
   @include media-breakpoint-down(lg) {
     font-size: 14px;

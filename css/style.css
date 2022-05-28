@@ -7737,11 +7737,6 @@ a:hover {
     font-size: 14px;
   }
 }
-@media (max-width: 991.98px) {
-  .header__logo {
-    max-width: 150px;
-  }
-}
 @media (max-width: 767.98px) {
   .header__top {
     padding-top: 80px;
@@ -8066,6 +8061,16 @@ a:hover {
 .menu__search:hover svg {
   fill: #db0909;
 }
+.menu__mobtel {
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 @media (min-width: 768px) {
   .menu__catalog-btn a.active {
     background-color: #db0909;
@@ -8076,6 +8081,9 @@ a:hover {
   }
   .menu__catalog-btn:hover a svg {
     fill: #fff;
+  }
+  .menu__mobtel {
+    display: none;
   }
 }
 @media (max-width: 991.98px) {
@@ -8588,6 +8596,7 @@ a:hover {
   margin-left: auto;
   background-color: #fff;
   border: 1px solid #e3e3e3;
+  border-top: none;
 }
 .search__input {
   position: relative;
@@ -8631,7 +8640,7 @@ a:hover {
   outline: none;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -1px;
   bottom: 0;
   cursor: pointer;
   -webkit-user-select: none;
@@ -10278,7 +10287,7 @@ a:hover {
 }
 .texteditor ol li span {
   display: block;
-  font-weight: normal;
+  font-weight: 300;
   margin-left: -23px;
   margin-top: 13px;
 }
@@ -10299,7 +10308,7 @@ a:hover {
 }
 .texteditor ul li span {
   display: block;
-  font-weight: normal;
+  font-weight: 300;
   margin-left: -23px;
   margin-top: 13px;
 }
