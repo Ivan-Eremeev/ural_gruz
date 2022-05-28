@@ -10156,6 +10156,7 @@ a:hover {
 .table {
   font-size: 14px;
   overflow-x: auto;
+  margin-bottom: 20px;
 }
 .table__container {
   min-width: 750px;
