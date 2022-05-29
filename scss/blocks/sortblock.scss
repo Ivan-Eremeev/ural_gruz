@@ -1,0 +1,73 @@
+/* sortblock */
+.sortblock { 
+  margin-bottom: 30px;
+  .filter__title {
+    margin-bottom: 30px;
+  }
+  &__item {
+    position: relative;
+    &:hover {
+      .sortblock__head {
+        background-color: #f6f5f5;
+      }
+      .sortblock__arrow {
+        svg {
+          transform: rotate(-90deg);
+          fill: $red;
+        }
+      }
+      .sortblock__drop {
+        display: block;
+      }
+    }
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px 10px 10px;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    font-weight: 500;
+  }
+  &__icon {
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0,-50%);
+    svg {
+      fill: #e3e3e3;
+      transform: rotate(90deg);
+    }
+  }
+  &__drop {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    background-color: #f6f5f5;
+    border-radius: 0 0 8px 8px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: #e3e3e3;
+      position: absolute;
+      top: 0;
+      left: 10px;
+      right: 10px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__icon {
+      margin-right: 10px;
+    }
+  }
+}
+/* /sortblock */

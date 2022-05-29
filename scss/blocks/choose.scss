@@ -1,0 +1,39 @@
+/* choose */
+.choose { 
+  margin-bottom: 25px;
+  .subtitle {
+    margin-bottom: 20px;
+  }
+  &__item {
+    height: 100%;
+    padding: 20px 25px;
+    background-color: #f6f5f5;
+    border-radius: 6px;
+    text-align: center;
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 0 2px 8px 3px rgba(0,0,0,.2);
+    }
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 58px;
+    margin-bottom: 20px;
+    img {
+      max-height: 100%;
+    }
+  }
+  &__title {
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  &__text {
+    
+  }
+  &__ps {
+    text-align: center;
+  }
+}
+/* /choose */
