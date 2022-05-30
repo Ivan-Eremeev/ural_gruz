@@ -1,0 +1,103 @@
+extends core/base.pug
+
+block title 
+  title Партнерам
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // welcome
+      .welcome
+        .container 
+
+          .welcome__img 
+            img(src="img/main_bg.jpg", alt="")
+
+          .welcome__menu 
+
+            include blocks/subcatalog.pug
+            
+          .welcome__content.welcome__content--padding-small
+
+            // breadcrambs
+            .breadcrambs
+              ul 
+                li 
+                  a(href="#") Главная
+            //	/breadcrambs
+
+            .welcome__partners
+              .welcome__partners-content
+                .welcome__partners-title Партнёрам
+                .welcome__partners-subtitle Больше, чем просто поставщик
+                .welcome__partners-text 
+                  p Партнёрство - наш стратегический приоритет. Мы открыты к долгосрочному и плодотворному сотрудничеству и уверены: вместе возможно многое!
+                  p Наша цель - эффективное функционирование бизнеса наших клиентов.
+                  p 
+                    b 100% - 100%, победа обеих сторон!
+              .welcome__partners-img
+                img(src="img/man.png", alt="")
+      //	/welcome
+
+      // main 
+      .main 
+
+        .container
+
+          aside.main__menu 
+
+          main.main__content 
+
+            // numbers
+            .numbers
+              .subtitle.subtitle--center О нас в 
+                span цифрах
+              .row.gy-3 
+                .col-md-4.col-6
+                  .numbers__item 
+                    .numbers__title 
+                      span 80 млн. 
+                      | метров
+                    .numbers__text Реализовали текстильных изделий
+                .col-md-4.col-6
+                  .numbers__item 
+                    .numbers__title 
+                      span 300 
+                      | клиентов
+                    .numbers__text В Уральском регионе
+                .col-md-4.col-6
+                  .numbers__item 
+                    .numbers__title 
+                      span 16 
+                      | лет
+                    .numbers__text На рынке
+                .col-md-4.col-6
+                  .numbers__item 
+                    .numbers__title 
+                      span 3000 
+                      | кв.м.
+                    .numbers__text Складских площадей
+                .col-md-4.col-6
+                  .numbers__item 
+                    .numbers__title 
+                      span 5 
+                      | минут
+                    .numbers__text На ответ по вашей заявке
+                .col-md-4.col-6
+                  .numbers__item 
+                    .numbers__title 
+                      span 1000 
+                      | позиций
+                    .numbers__text В наличии на складе
+            //	/numbers
+
+            include blocks/banner.pug
+
+      //	/main 
+
+    include core/footer.pug

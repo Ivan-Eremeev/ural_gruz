@@ -83,6 +83,9 @@ a {
   font-weight: bold;
   color: #464646;
   text-align: center;
+  span {
+    color: $red;
+  }
   &--left {
     text-align: left;
   }
@@ -94,6 +97,9 @@ a {
   font-size: 30px;
   font-weight: bold;
   color: #464646;
+  span {
+    color: $red;
+  }
   &--center {
     text-align: center;
   }
@@ -104,6 +110,9 @@ a {
 .navpage {
   padding: 30px 0;
   font-size: 18px;
+  .title {
+    margin-bottom: 20px;
+  }
   ul {
     margin-top: -10px;
   }
