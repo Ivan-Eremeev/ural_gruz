@@ -12,6 +12,10 @@
   }
   &__item {
     display: flex;
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 0px 2px 8px 3px rgb(0 0 0 / 20%);
+    }
   }
   &__img {
     width: 245px;
@@ -39,6 +43,7 @@
   &__title {
     padding-left: 14px;
     font-size: 24px;
+    color: #464646;
     font-weight: bold;
     margin-bottom: 15px;
     position: relative;
@@ -67,6 +72,9 @@
     }
     &__content {
       padding: 30px 20px;
+    }
+    &__title {
+      font-size: 18px;
     }
   }
 }
