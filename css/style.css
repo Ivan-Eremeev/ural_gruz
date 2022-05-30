@@ -10958,7 +10958,7 @@ a:hover {
 /* /choose */
 /* numbers */
 .numbers {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 .numbers .subtitle {
   margin-bottom: 20px;
@@ -11022,3 +11022,87 @@ a:hover {
 }
 
 /* /numbers */
+/* offers */
+.offers {
+  margin-bottom: 25px;
+}
+.offers .subtitle {
+  margin-bottom: 20px;
+}
+.offers .row {
+  margin-top: -20px;
+}
+.offers .row > * {
+  padding-top: 20px;
+}
+.offers__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.offers__img {
+  width: 245px;
+  min-height: 130px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 10px;
+  position: relative;
+}
+.offers__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.offers__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 20px 30px;
+  background-color: #f9f8f8;
+}
+.offers__title {
+  padding-left: 14px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  position: relative;
+}
+.offers__title:after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 90%;
+  background-color: #db0909;
+  position: absolute;
+  top: 1px;
+  left: 0;
+}
+@media (max-width: 575.98px) {
+  .offers__item {
+    display: block;
+  }
+  .offers__img {
+    width: 100%;
+    min-height: 200px;
+    margin-right: 0;
+  }
+  .offers__content {
+    padding: 30px 20px;
+  }
+}
+
+/* /offers */
