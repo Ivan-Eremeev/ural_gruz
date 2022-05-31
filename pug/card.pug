@@ -1,0 +1,159 @@
+extends core/base.pug
+
+block title 
+  title Категории товаров
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // main 
+      .main 
+
+        .main__img 
+          img(src="img/main_bg.jpg", alt="")
+
+        .container
+
+          aside.main__menu 
+
+            include blocks/subcatalog.pug
+
+          main.main__content.main__content--padding-small
+
+            // breadcrambs
+            .breadcrambs
+              ul 
+                li 
+                  a(href="#") Главная
+                li 
+                  a(href="#") Каталог
+                li 
+                  a(href="#") Лебедки электрические
+            //	/breadcrambs
+
+            // card
+            .card
+              .row 
+                .col-lg-4
+                  .card__title.d-lg-none.d-block Лебедка электрическая KCD-300
+                  .card__slider 
+                .col-lg-8
+                  .card__content 
+                    .card__head 
+                      .card__title.d-lg-block.d-none Лебедка электрическая KCD-300
+                      .card__icons 
+                        .card__icon 
+                        .card__icon 
+                    ul.card__list 
+                      li Г/П, Т.:
+                        span 0,3
+                      li Емкость барабана М.:
+                        span 60
+                      li Ф каната, ММ:
+                        span 5,1
+                      li Компл-я канатом:
+                        span Да
+                      li Скорость, М/С:
+                        span 0,2
+                      li Мощность КВТ:
+                        span 1,6
+                      li Рабочее нап-ие В:
+                        span 220
+                      li Вес, КГ:
+                        span 40
+                    .card__desc 
+                      .card__article Код товара: 030 3110 7010
+                      .card__storage 
+                        .card__check
+                        | Есть в наличии
+                    form(action="#").card__bottom 
+                      .js-counter.card__counter 
+                        .js-counter-minus.card__counter-minus 
+                          <svg version="1.1" width="8" height="14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 492.004 492.004">
+                            <path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
+                          </svg>
+                        .js-counter-input.card__counter-input
+                          input(type="text" value="1" maxlength="3")
+                        .js-counter-plus.card__counter-plus 
+                          <svg version="1.1" width="8" height="14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 492.004 492.004">
+                            <path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
+                          </svg>
+                      .card__price Цена: 
+                        span 18225 ₽
+                      .card__btn 
+                        button(type="submit").btn.btn--red Купить
+            //	/card
+
+            // cardtabs
+            .cardtabs
+              .cardtabs__triggers 
+                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-description" type="button" role="tab" aria-controls="pills-description" aria-selected="true">Описание</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-video" type="button" role="tab" aria-controls="pills-video" aria-selected="false">Видео</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-documentation" type="button" role="tab" aria-controls="pills-documentation" aria-selected="false">
+                      <svg height="15" viewBox="0 0 512 512" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m409.785156 278.5-153.785156 153.785156-153.785156-153.785156 28.285156-28.285156 105.5 105.5v-355.714844h40v355.714844l105.5-105.5zm102.214844 193.5h-512v40h512zm0 0"/></svg>
+                      | Документация
+                      </button>
+                  </li>
+                </ul>
+              .cardtabs__content 
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-home-tab">
+                    .cardtabs__description 
+                      p Текстильные стропы стп от торговой марки «СИБТАЛЬ» выполнены строго по Российскому «ГОСТУ» с соблюдением всех требований Российского законодательства. Их стоимость на 20% ниже цветных аналогов, при этом не уступают окрашенным вариантам по качеству и грузоподъемности. Все изделия выполнены из качественной полиэстерной ленты. Они хорошо сопротивляются воздействию влаги, не растягиваются даже при достаточно сильных нагрузках.
+                      p Вся продукция проходит испытания на соответствие запаса прочности 7:1. Благодаря этому их использовать можно даже в условиях повышенной влажности. Мы самостоятельно размещаем заказы на производство! Это позволяет выполнять любые запросы, включая пошив нетиповых изделий с усиленной грузоподъемностью и разрывными характеристиками без изменения стоимости товара
+                  </div>
+                  <div class="tab-pane fade" id="pills-video" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    // video-section
+                    .video-section
+                      .row.gy-3
+                        .col-sm-6.col-md-4
+                          a(href="#").video-section__item 
+                            .video-section__img 
+                              img(src="img/thumb_03.jpg", alt="")
+                              .video-section__play 
+                                .video-section__play-triangle 
+                        .col-sm-6.col-md-4
+                          a(href="#").video-section__item 
+                            .video-section__img 
+                              img(src="img/thumb_02.jpg", alt="")
+                              .video-section__play 
+                                .video-section__play-triangle 
+                        .col-sm-6.col-md-4
+                          a(href="#").video-section__item 
+                            .video-section__img 
+                              img(src="img/thumb_01.jpg", alt="")
+                              .video-section__play 
+                                .video-section__play-triangle 
+                    //	/video-section
+                  </div>
+                  <div class="tab-pane fade" id="pills-documentation" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    .cardtabs__documentation 
+                      ul 
+                        li 
+                          a(href="#") Технический паспорт
+                        li 
+                          a(href="#") Каталог продукции
+                        li 
+                          a(href="#") Технический паспорт
+                        li 
+                          a(href="#") Каталог продукции
+                  </div>
+                </div>
+            //	/cardtabs
+
+            include blocks/banner.pug
+
+      //	/main 
+
+    include core/footer.pug

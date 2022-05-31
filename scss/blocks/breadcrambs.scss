@@ -4,7 +4,9 @@
   ul {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -5px;
     li {
+      margin-top: 5px;
       &:not(:last-child) {
         padding-right: 10px;
         margin-right: 10px;
@@ -23,6 +25,9 @@
       a {
         color: $red;
         border-bottom: 1px solid $red;
+        &:hover {
+          border-color: transparent;
+        }
       }
     }
   }
