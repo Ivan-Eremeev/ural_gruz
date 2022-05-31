@@ -11465,14 +11465,47 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 .card__title {
+  margin-right: 10px;
   font-size: 26px;
   font-weight: bold;
-  margin-bottom: 10px;
+}
+.card__icons {
+  margin: 10px 0;
+}
+.card__icons-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -10px;
+}
+.card__icon {
+  width: 22px;
+  height: 22px;
+  margin-left: 30px;
+  margin-top: 10px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.card__icon svg {
+  fill: #aaa7a7;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.card__icon:hover svg {
+  fill: #db0909;
 }
 .card__list {
   margin-bottom: 17px;
@@ -11642,11 +11675,19 @@ a:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+@media (max-width: 1399.98px) {
+  .card__title {
+    font-size: 24px;
+  }
+}
 @media (max-width: 575.98px) {
   .card__btn {
     width: 100%;
     text-align: center;
     margin-top: 20px;
+  }
+  .card__title {
+    font-size: 20px;
   }
 }
 

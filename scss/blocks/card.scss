@@ -9,18 +9,39 @@
   }
   &__head {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-  }
-  &__title {
-    font-size: 26px;
-    font-weight: bold;
     margin-bottom: 10px;
   }
+  &__title {
+    margin-right: 10px;
+    font-size: 26px;
+    font-weight: bold;
+  }
   &__icons {
-    
+    margin: 10px 0;
+  }
+  &__icons-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -10px;
   }
   &__icon {
-    
+    width: 22px;
+    height: 22px;
+    margin-left: 30px;
+    margin-top: 10px;
+    flex-shrink: 0;
+    svg {
+      fill: #aaa7a7;
+      transition: 0.3s;
+    }
+    &:hover {
+      svg {
+        fill: $red;
+      }
+    }
   }
   &__list {
     margin-bottom: 17px;
@@ -148,11 +169,19 @@
       transform: translate(-50%,-50%);
     }
   }
+  @include media-breakpoint-down(xxl) {
+    &__title {
+      font-size: 24px;
+    }
+  }
   @include media-breakpoint-down(sm) {
     &__btn {
       width: 100%;
       text-align: center;
       margin-top: 20px;
+    }
+    &__title {
+      font-size: 20px;
     }
   }
 }
