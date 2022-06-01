@@ -1,0 +1,160 @@
+extends core/base.pug
+
+block title 
+  title Всплывающие окна
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // main 
+      .main 
+
+        .main__img 
+          img(src="img/main_bg.jpg", alt="")
+
+        .container
+
+          aside.main__menu 
+
+            include blocks/subcatalog.pug
+
+          main.main__content.main__content--padding-small
+
+            .modal__trigger 
+              span(data-bs-toggle="modal" data-bs-target="#callbackModal") Заказать звонок
+            .modal__trigger 
+              span(data-bs-toggle="modal" data-bs-target="#consultationModal") Консультация по сервису
+            .modal__trigger 
+              span(data-bs-toggle="modal" data-bs-target="#thankModal") Спасибо за заявку
+            .modal__trigger 
+              span(data-bs-toggle="modal" data-bs-target="#commentModal") Оставить отзыв
+
+            // modal bootstrap
+            .modal.fade#callbackModal
+              .modal-dialog.modal-dialog-centered.modal-dialog--w540 
+                .modal-content
+                  
+                  // form
+                  form(action="#").form
+                    .title Заказать звонок
+                    .form__text Оставьте свои контакты, <br>и мы Вам перезвоним
+                    .row.mb-3 
+                      .col-12 
+                        .form__input 
+                          input(type="text" placeholder="Имя*")
+                      .col-12 
+                        .form__input 
+                          input(type="text" placeholder="Телефон*")
+                      .col-12 
+                        .form__input 
+                          input(type="text" placeholder="Город*")
+                    .form__approval 
+                      .form__checkbox 
+                        input#approval(type="checkbox" checked)
+                        label(for="approval") 
+                      span нажимая кнопку «Отправить» вы даёте согласие на обработку 
+                        a(href="#") персональных данных
+                    .form__btn 
+                      .btn.btn--red Отправить
+                  //	/form
+                  
+                  .modal_close(data-bs-dismiss="modal")
+            // /modal bootstrap
+
+            
+
+            // modal bootstrap
+            .modal.fade#consultationModal
+              .modal-dialog.modal-dialog-centered.modal-dialog--w540 
+                .modal-content
+                  
+                  // form
+                  form(action="#").form
+                    .title Консультация по сервису
+                    .row.mb-3 
+                      .col-12 
+                        .form__input 
+                          input(type="text" placeholder="Имя*")
+                      .col-12 
+                        .form__input 
+                          input(type="text" placeholder="Телефон*")
+                      .col-12 
+                        .form__input 
+                          input(type="text" placeholder="E-mail*")
+                      .col-12 
+                        .form__input 
+                          input(type="text" placeholder="Город*")
+                      .col-12 
+                        .form__input 
+                          textarea(placeholder="Вопрос")
+                    .form__approval 
+                      .form__checkbox 
+                        input#approval(type="checkbox" checked)
+                        label(for="approval") 
+                      span нажимая кнопку «Отправить» вы даёте согласие на обработку 
+                        a(href="#") персональных данных
+                    .form__btn 
+                      .btn.btn--red Отправить
+                  //	/form
+                  
+                  .modal_close(data-bs-dismiss="modal")
+            // /modal bootstrap
+
+            // modal bootstrap
+            .modal.fade#thankModal
+              .modal-dialog.modal-dialog-centered.modal-dialog--w540 
+                .modal-content
+                  
+                  // form
+                  form(action="#").form
+                    .form__iconcheck
+                    .title Cпасибо Вам за вашу заявку!
+                    .form__text Мы свяжемся с Вами в ближайщее время!
+                  //	/form
+                  
+                  .modal_close(data-bs-dismiss="modal")
+            // /modal bootstrap
+
+            // modal bootstrap
+            .modal.fade#commentModal
+              .modal-dialog.modal-dialog-centered.modal-dialog--w540 
+                .modal-content
+                  
+                  // form
+                  form(action="#").form
+                    .title Оставить отзыв
+                    .row.mb-3 
+                      .col-12 
+                        .form__input 
+                          input(type="text" placeholder="Имя*")
+                      .col-12 
+                        .form__input 
+                          input(type="text" placeholder="Телефон*")
+                      .col-12 
+                        .form__input 
+                          input(type="text" placeholder="E-mail*")
+                      .col-12 
+                        .form__input 
+                          input(type="text" placeholder="Город*")
+                      .col-12 
+                        .form__input 
+                          textarea(placeholder="Вопрос")
+                    .form__approval 
+                      .form__checkbox 
+                        input#approval(type="checkbox" checked)
+                        label(for="approval") 
+                      span нажимая кнопку «Отправить» вы даёте согласие на обработку 
+                        a(href="#") персональных данных
+                    .form__btn 
+                      .btn.btn--red Отправить
+                  //	/form
+                  
+                  .modal_close(data-bs-dismiss="modal")
+            // /modal bootstrap
+
+    include core/footer.pug

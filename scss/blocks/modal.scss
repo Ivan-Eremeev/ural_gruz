@@ -5,6 +5,9 @@
 		max-width: 730px;
 		margin-top: 50px;
 		margin-bottom: 50px;
+		&--w540 {
+			max-width: 540px;
+		}
 	}
 	&-content {
 		position: relative;
@@ -145,6 +148,18 @@
 			background-color: $red;
 			&:after {
 				color: #fff;
+			}
+		}
+	}
+	&__trigger {
+		margin: 10px 0;
+		font-weight: 500;
+		span {
+			cursor: pointer;
+			user-select: none;
+			transition: 0.3s;
+			&:hover {
+				color: $red;
 			}
 		}
 	}
