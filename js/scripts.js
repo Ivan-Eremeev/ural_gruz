@@ -65,6 +65,7 @@ window.onload = () => {
   });
   const modalSlider = new Swiper('#modalSlider', {
     spaceBetween: 10,
+    autoHeight: true,
     navigation: {
       nextEl: '.modal__arrow--next',
       prevEl: '.modal__arrow--prev',

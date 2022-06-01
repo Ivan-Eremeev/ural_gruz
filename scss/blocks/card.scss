@@ -2,7 +2,73 @@
 .card { 
   margin-bottom: 25px;
   &__slider {
-    
+    cursor: pointer;
+    user-select: none;
+    &:hover {
+      .card__slider-zoom {
+        svg {
+          fill: $red;
+        }
+      }
+    }
+  }
+  &__slider-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 243px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+    position: relative;
+    img {
+
+    }
+  }
+  &__slider-zoom {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    svg {
+      fill: #e3e3e3;
+      transition: 0.3s;
+    } 
+  }
+  &__slider-thumbs {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__slider-thumbs-row {
+    display: flex;
+    margin-left: -6px;
+  }
+  &__slider-thumb {
+    width: 25%;
+    padding-left: 6px;
+  }
+  &__slider-thumb-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 52px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #f1efef;
+    position: relative;
+  }
+  &__slider-num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(53, 53, 53, 0.91);
+    font-weight: 500;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
   &__content {
     
@@ -172,6 +238,11 @@
   @include media-breakpoint-down(xxl) {
     &__title {
       font-size: 24px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__slider {
+      margin-bottom: 20px;
     }
   }
   @include media-breakpoint-down(sm) {

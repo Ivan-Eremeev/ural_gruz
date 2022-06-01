@@ -41,7 +41,29 @@ block content
               .row 
                 .col-lg-4
                   .card__title.d-lg-none.d-block Лебедка электрическая KCD-300
-                  .card__slider 
+                  .card__slider(data-bs-toggle="modal" data-bs-target="#sliderModal")
+                    .card__slider-img 
+                      img(src="img/winch_1.jpg", alt="")
+                      .card__slider-zoom
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 638.99 639.01">
+                          <path class="st0" d="M270.98,481.3C150.66,481.3 53.11,385.3 53.11,266.89C53.11,148.47 150.66,52.48 270.98,52.48C391.31,52.48 488.85,148.47 488.85,266.89C488.85,385.3 391.31,481.3 270.98,481.3M619.7,592.21L461.69,436.72C503.07,391.77 528.49,332.31 528.49,266.89C528.47,126.93 413.19,13.5 270.98,13.5C128.77,13.5 13.5,126.93 13.5,266.89C13.5,406.84 128.77,520.28 270.98,520.28C332.43,520.28 388.78,499.03 433.05,463.7L591.67,619.79C599.4,627.41 611.95,627.41 619.68,619.79C627.43,612.18 627.43,599.82 619.7,592.21"/>
+                          <path class="st1" d="M270.98,481.3C150.66,481.3 53.11,385.3 53.11,266.89C53.11,148.47 150.66,52.48 270.98,52.48C391.31,52.48 488.85,148.47 488.85,266.89C488.85,385.3 391.31,481.3 270.98,481.3ZM619.7,592.21L461.69,436.72C503.07,391.77 528.49,332.31 528.49,266.89C528.47,126.93 413.19,13.5 270.98,13.5C128.77,13.5 13.5,126.93 13.5,266.89C13.5,406.84 128.77,520.28 270.98,520.28C332.43,520.28 388.78,499.03 433.05,463.7L591.67,619.79C599.4,627.41 611.95,627.41 619.68,619.79C627.43,612.18 627.43,599.82 619.7,592.21Z"/>
+                        </svg>
+                    .card__slider-thumbs 
+                       .card__slider-thumbs-row 
+                        .card__slider-thumb 
+                          .card__slider-thumb-img
+                            img(src="img/winch_1.jpg", alt="") 
+                        .card__slider-thumb 
+                          .card__slider-thumb-img
+                            img(src="img/winch_1.jpg", alt="") 
+                        .card__slider-thumb 
+                          .card__slider-thumb-img
+                            img(src="img/winch_1.jpg", alt="") 
+                        .card__slider-thumb 
+                          .card__slider-thumb-img
+                            img(src="img/winch_1.jpg", alt="") 
+                            .card__slider-num + 4
                 .col-lg-8
                   .card__content 
                     .card__head 
@@ -127,19 +149,16 @@ block content
                             .video-section__img 
                               img(src="img/thumb_03.jpg", alt="")
                               .video-section__play 
-                                .video-section__play-triangle 
                         .col-sm-6.col-md-4
                           a(href="#").video-section__item 
                             .video-section__img 
                               img(src="img/thumb_02.jpg", alt="")
                               .video-section__play 
-                                .video-section__play-triangle 
                         .col-sm-6.col-md-4
                           a(href="#").video-section__item 
                             .video-section__img 
                               img(src="img/thumb_01.jpg", alt="")
                               .video-section__play 
-                                .video-section__play-triangle 
                     //	/video-section
                   </div>
                   <div class="tab-pane fade" id="pills-documentation" role="tabpanel" aria-labelledby="pills-contact-tab">
@@ -160,5 +179,58 @@ block content
             include blocks/banner.pug
 
       //	/main 
+
+      // modal bootstrap
+      .modal.fade#sliderModal
+        .modal-dialog.modal-dialog-centered
+          .modal-content
+            .modal__slider-wrap
+              .modal__slider#modalSlider
+                .swiper-wrapper 
+                  .swiper-slide 
+                    .modal__img.modal__img--card
+                      img(src="img/winch_1.jpg", alt="")
+                  .swiper-slide 
+                    .modal__img.modal__img--card
+                      img(src="img/winch_1.jpg", alt="")
+                  .swiper-slide 
+                    .modal__img.modal__img--card
+                      img(src="img/winch_1.jpg", alt="")
+                  .swiper-slide 
+                    .modal__img.modal__img--card
+                      img(src="img/winch_1.jpg", alt="")
+                  .swiper-slide 
+                    .modal__img.modal__img--card
+                      img(src="img/winch_1.jpg", alt="")
+                  .swiper-slide 
+                    .modal__img.modal__img--card
+                      img(src="img/winch_1.jpg", alt="")
+
+              .modal__arrow.modal__arrow--prev.swiper-button-prev
+              .modal__arrow.modal__arrow--next.swiper-button-next
+
+            .modal__slider-nav#modalSliderNav
+              .swiper-wrapper 
+                .swiper-slide 
+                  .modal__thumb 
+                    img(src="img/winch_1.jpg", alt="")
+                .swiper-slide 
+                  .modal__thumb 
+                    img(src="img/winch_1.jpg", alt="")
+                .swiper-slide 
+                  .modal__thumb 
+                    img(src="img/winch_1.jpg", alt="")
+                .swiper-slide 
+                  .modal__thumb 
+                    img(src="img/winch_1.jpg", alt="")
+                .swiper-slide 
+                  .modal__thumb 
+                    img(src="img/winch_1.jpg", alt="")
+                .swiper-slide 
+                  .modal__thumb 
+                    img(src="img/winch_1.jpg", alt="")
+                
+            .modal_close(data-bs-dismiss="modal")
+      // /modal bootstrap
 
     include core/footer.pug

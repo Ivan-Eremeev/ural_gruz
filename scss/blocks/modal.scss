@@ -69,6 +69,21 @@
 			top: 0;
 			left: 0;
 		}
+		&--card {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: default;
+			img {
+				width: 80%;
+				height: auto;
+				opacity: 1;
+				position: static;
+			}
+			&:after {
+				display: none;
+			}
+		}
 	}
 	&__slider-nav {
 		width: 360px;
