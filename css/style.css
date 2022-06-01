@@ -7969,29 +7969,35 @@ a:hover {
 /* catalog-menu */
 .catalog-menu {
   width: 100%;
-  height: calc(100vh - 60px);
+  padding-bottom: 10px;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%;
   z-index: 12;
   visibility: hidden;
   opacity: 0;
-  -webkit-transform: translate(0, 20px);
-  -ms-transform: translate(0, 20px);
-  transform: translate(0, 20px);
+  -webkit-transform: translate(-50%, 20px);
+  -ms-transform: translate(-50%, 20px);
+  transform: translate(-50%, 20px);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-.catalog-menu .container {
-  height: 100%;
+.catalog-menu::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 .catalog-menu__container {
-  height: 100%;
-  padding: 19px 30px 0;
-  background-color: #f4f4f4;
-  overflow-y: auto;
-  overflow-x: hidden;
+  background-color: #fff;
+  padding: 30px 15px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .catalog-menu .row {
   margin-left: -50px;
@@ -8067,9 +8073,9 @@ a:hover {
 .catalog-menu.open {
   visibility: visible;
   opacity: 1;
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 @media (max-width: 991.98px) {
   .catalog-menu .row {
@@ -8103,6 +8109,9 @@ a:hover {
   }
 }
 @media (max-width: 575.98px) {
+  .catalog-menu {
+    padding: 0 0 10px;
+  }
   .catalog-menu__container {
     padding: 20px 10px;
   }
@@ -12115,6 +12124,99 @@ a:hover {
   height: 29px;
   background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 405.272 405.272' fill='%23db0909'%3E%3Cpath d='M393.401,124.425L179.603,338.208c-15.832,15.835-41.514,15.835-57.361,0L11.878,227.836c-15.838-15.835-15.838-41.52,0-57.358c15.841-15.841,41.521-15.841,57.355-0.006l81.698,81.699L336.037,67.064c15.841-15.841,41.523-15.829,57.358,0C409.23,82.902,409.23,108.578,393.401,124.425z'/%3E%3C/svg%3E");
   background-size: contain;
+}
+.form__orders {
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.form__orders-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 12px 30px;
+  background-color: #e3e3e3;
+}
+.form__order-gray {
+  margin-right: 25px;
+  color: #908585;
+}
+.form__order-gray span {
+  color: #333;
+}
+.form__order-price {
+  color: #db0909;
+  font-weight: bold;
+}
+.form__order {
+  padding: 12px 30px;
+  border-bottom: 1px solid #e3e3e3;
+  position: relative;
+}
+.form__orders-body {
+  background-color: #f7f7f7;
+}
+.form__order-title {
+  margin-bottom: 5px;
+}
+.form__order-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.form__order-basket {
+  position: absolute;
+  right: 30px;
+  bottom: 8px;
+  fill: #ccc;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.form__order-basket:hover {
+  fill: #db0909;
+}
+.form__orders-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 15px 30px 12px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.form__orders-more svg {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin-left: 10px;
+}
+.form__orders-more:hover {
+  color: #db0909;
+  fill: #db0909;
 }
 @media (max-width: 575.98px) {
   .form {

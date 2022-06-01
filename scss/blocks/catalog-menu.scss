@@ -1,24 +1,29 @@
 /* catalog-menu */
 .catalog-menu { 
   width: 100%;
-  height: calc(100vh - 60px);
+  padding-bottom: 10px;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%;
   z-index: 12;
   visibility: hidden;
   opacity: 0;
-  transform: translate(0,20px);
+  transform: translate(-50%,20px);
   transition: 0.5s;
-  .container {
-    height: 100%;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
   &__container {
-    height: 100%;
-    padding: 19px 30px 0;
-    background-color: #f4f4f4;
-    overflow-y: auto;
-    overflow-x: hidden;
+    background-color: #fff;
+    padding: 30px 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
   }
   .row {
     margin-left: -50px;
@@ -90,7 +95,7 @@
   &.open {
     visibility: visible;
     opacity: 1;
-    transform: translate(0,0);
+    transform: translate(-50%,0);
   }
   @include media-breakpoint-down(lg) {
     .row {
@@ -124,6 +129,7 @@
     }
   }
   @include media-breakpoint-down(sm) {
+    padding: 0 0 10px;
     &__container {
       padding:  20px 10px;
     }

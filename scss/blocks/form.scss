@@ -126,6 +126,82 @@
       background-size: contain;
     }
   }
+  &__orders {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  &__orders-head {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 12px 30px;
+    background-color: #e3e3e3;
+  }
+
+  &__order-gray {
+    margin-right: 25px;
+    color: $gray;
+    span {
+      color: $black;
+    }
+  }
+
+  &__order-price {
+    color: $red;
+    font-weight: bold;
+  }
+
+  &__order {
+    padding: 12px 30px;
+    border-bottom: 1px solid #e3e3e3;
+    position: relative;
+  }
+
+  &__orders-body {
+    background-color: #f7f7f7;
+  }
+
+  &__order-title {
+    margin-bottom: 5px;
+  }
+
+  &__order-bottom {
+    display: flex;
+  }
+
+  &__order-basket {
+    position: absolute;
+    right: 30px;
+    bottom: 8px;
+    fill: #ccc;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    &:hover {
+      fill: $red;
+    }
+  }
+  &__orders-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px 12px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    svg {
+      transform: rotate(90deg);
+      margin-left: 10px;
+    }
+    &:hover {
+      color: $red;
+      fill: $red;
+    }
+  }
   @include media-breakpoint-down(sm) {
     padding: 30px 20px 40px;
   }
