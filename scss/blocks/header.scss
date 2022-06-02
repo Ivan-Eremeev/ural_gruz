@@ -62,9 +62,69 @@
     display: flex;
     align-items: center;
     font-size: 14px;
-    a {
-      text-decoration: underline;
+    position: relative;
+  }
+  &__cart-link {
+    display: inline;
+    text-decoration: underline;
+    color: $black;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    &:hover {
+      color: $red;
     }
+  }
+  &__cart-drop {
+    width: 411px;
+    padding-top: 40px;
+    background-color: #fff;
+    box-shadow: 0px 2px 8px 1px rgba(71, 70, 70, 0.09);
+    border-radius: 10px;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 14px;
+    cursor: default;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 3;
+    display: none;
+    &:hover {
+      color: $black;
+    }
+    &.open {
+      display: block;
+    }
+  }
+  &__cart-container {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  &__cart-item {
+    display: flex;
+    padding: 12px 50px 12px 10px;
+    position: relative;
+    &:not(:last-child) {
+      border-bottom: 1px solid #e3e3e3;
+    }
+  }
+  &__cart-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    padding: 3px;
+    margin-right: 10px;
+    border: 1px solid #d6d6d6;
+    img {
+      max-height: 100%;
+    }
+  }
+  &__cart-content {
+    
   }
   &__cart-num {
     display: flex;
@@ -80,6 +140,45 @@
     position: absolute;
     top: -8px;
     right: -8px;
+  }
+  &__cart-close {
+    width: 17px;
+    height: 17px;
+    border-radius: 100%;
+    background-color: #ccc;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    cursor: pointer;
+    user-select: none;
+    &:after,&:before {
+      content: '';
+      display: block;
+      width: 60%;
+      height: 1px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    &:after {
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+    &:before {
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }  
+  }
+  &__cart-btn {
+    display: block;
+    padding: 10px;
+    background-color: #e4e3e3;
+    text-align: center;
+    color: $red;
+    text-decoration: underline;
+    font-weight: bold;
+    &:hover {
+      color: $black;
+    }
   }
   @include media-breakpoint-down(xl) {
     &__item {
@@ -129,6 +228,15 @@
       top: 0;
       letter-spacing: 0;
       z-index: 10;
+    }
+    &__cart-drop {
+      right: 50%;
+      transform: translate(50%,0);
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__cart-drop {
+      width: 300px;
     }
   }
 }

@@ -338,4 +338,20 @@ window.onload = () => {
   }
   counter('.js-counter');
 
+  // Показать еще
+  function showMore(block, numShow) {
+    const element = block.find('.js-show-more-element');
+    const btn = block.find('.js-show-more-btn');
+    element.each(function (index) {
+      if (index >= numShow) {
+        $(this).fadeOut();
+      }
+    })
+    btn.on('click', function () {
+      $(this).fadeOut();
+      element.fadeIn();
+    })
+  }
+  showMore($('.js-show-more-block'), 3);
+
 }
