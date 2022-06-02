@@ -240,7 +240,7 @@ window.onload = () => {
       $('.video-img').on('click', function () {
         // создаем iframe со включенной опцией autoplay
         let wrapp = $(this).closest('.js-youtube'),
-          videoId = wrapp.attr('id'),
+          videoId = wrapp.data('video-id'),
           iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
 
         if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
