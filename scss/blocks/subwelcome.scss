@@ -41,30 +41,34 @@
         opacity: 0;
       }
       &:hover {
-        &:before {
-          opacity: 1;
-        }
-        .subwelcome__icon {
-          border-radius: 6px 0 0 0;
-        }
-        .subwelcome__text {
-          border-radius: 0 6px 0 0;
-        }
-        .subwelcome__drop {
-          display: block;
-        }
-        .subwelcome__arrow {
-          transform: translate(0,-50%);
-          svg {
-            fill: $red;
-            transform: rotate(-90deg);
-          }
-        }
+        
+      }
+      .subwelcome__head {
+        cursor: pointer;
+        user-select: none;
       }
     }
   }
   &__head {
     display: flex;
+    &.active {
+      &:before {
+        opacity: 1;
+      }
+      .subwelcome__icon {
+        border-radius: 6px 0 0 0;
+      }
+      .subwelcome__text {
+        border-radius: 0 6px 0 0;
+      }
+      .subwelcome__arrow {
+        transform: translate(0, -50%);
+        svg {
+          fill: $red;
+          transform: rotate(-90deg);
+        }
+      }
+    }
   }
   &__icon {
     display: flex;
@@ -118,6 +122,9 @@
       top: 0;
       left: 20px;
       right: 20px;
+    }
+    &.open {
+      display: block;
     }
   }
   @include media-breakpoint-down(lg) {

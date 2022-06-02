@@ -7,18 +7,7 @@
   &__item {
     position: relative;
     &:hover {
-      .sortblock__head {
-        background-color: #f6f5f5;
-      }
-      .sortblock__arrow {
-        svg {
-          transform: rotate(-90deg);
-          fill: $red;
-        }
-      }
-      .sortblock__drop {
-        display: block;
-      }
+      
     }
   }
   &__head {
@@ -28,6 +17,17 @@
     border-radius: 8px 8px 0 0;
     position: relative;
     font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    &.active {
+      background-color: #f6f5f5;
+      .sortblock__arrow {
+        svg {
+          transform: rotate(-90deg);
+          fill: $red;
+        }
+      }
+    }
   }
   &__icon {
     margin-right: 20px;
@@ -62,6 +62,9 @@
       top: 0;
       left: 10px;
       right: 10px;
+    }
+    &.open {
+      display: block;
     }
   }
   @include media-breakpoint-down(sm) {
