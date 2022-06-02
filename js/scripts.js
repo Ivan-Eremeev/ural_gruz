@@ -275,34 +275,6 @@ window.onload = () => {
   };
   uploadYoutubeVideo();
 
-  // YandexMap
-  ymaps.ready(function () {
-    initYandexMap($('#yandexMap'));
-  });
-
-  function initYandexMap(mapBlock) {
-    if (mapBlock.length) {
-      const mapId = mapBlock.attr('id');
-      const center = mapBlock.data('center');
-      const place = mapBlock.data('place');
-      const zoom = mapBlock.data('zoom');
-      var myMap;
-      myMap = new ymaps.Map(mapId, {
-        center: center, // Центер карты
-        zoom: zoom, // Коэффициент масштаба карты
-        controls: [ // Элементы управления
-          'zoomControl',
-        ]
-      });
-      myMap.behaviors.disable('scrollZoom'); // Отключить изменение масштаба скроллом мыши
-      // Добавление метки
-      var myPlacemark = new ymaps.Placemark(place, null, {
-        preset: 'islands#redDotIcon'
-      });
-      myMap.geoObjects.add(myPlacemark);
-    }
-  } 
-
   // JQuery Scrollbar
   $('.scrollbar-inner').scrollbar();
 
@@ -353,5 +325,33 @@ window.onload = () => {
     })
   }
   showMore($('.js-show-more-block'), 3);
+
+  // YandexMap
+  ymaps.ready(function () {
+    initYandexMap($('#yandexMap'));
+  });
+
+  function initYandexMap(mapBlock) {
+    if (mapBlock.length) {
+      const mapId = mapBlock.attr('id');
+      const center = mapBlock.data('center');
+      const place = mapBlock.data('place');
+      const zoom = mapBlock.data('zoom');
+      var myMap;
+      myMap = new ymaps.Map(mapId, {
+        center: center, // Центер карты
+        zoom: zoom, // Коэффициент масштаба карты
+        controls: [ // Элементы управления
+          'zoomControl',
+        ]
+      });
+      myMap.behaviors.disable('scrollZoom'); // Отключить изменение масштаба скроллом мыши
+      // Добавление метки
+      var myPlacemark = new ymaps.Placemark(place, null, {
+        preset: 'islands#redDotIcon'
+      });
+      myMap.geoObjects.add(myPlacemark);
+    }
+  } 
 
 }
