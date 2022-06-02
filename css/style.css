@@ -11214,12 +11214,13 @@ a:hover {
   right: 0;
 }
 @media (max-width: 575.98px) {
-  .category-description__content img {
-    width: 100%;
-    float: none;
-  }
   .category-description__item svg {
     margin-right: 10px;
+  }
+  .category-description__img {
+    width: 100%;
+    float: none;
+    text-align: center;
   }
 }
 

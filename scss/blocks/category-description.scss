@@ -53,16 +53,15 @@
     }
   }
   @include media-breakpoint-down(sm) {
-    &__content {
-      img {
-        width: 100%;
-        float: none;
-      }
-    }
     &__item {
       svg {
         margin-right: 10px;
       }
+    }
+    &__img {
+      width: 100%;
+      float: none;
+      text-align: center;
     }
   }
 }
