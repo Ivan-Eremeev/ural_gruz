@@ -8253,6 +8253,9 @@ a:hover {
   overflow: hidden;
   border-bottom: 1px solid rgba(240, 240, 240, 0.14);
 }
+.menu__nav {
+  position: relative;
+}
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
