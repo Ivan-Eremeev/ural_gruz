@@ -8,6 +8,7 @@
   display: none;
   overflow-y: auto;
   &__container {
+    width: 100%;
     max-width: 825px;
     margin-left: auto;
     background-color: #fff;
@@ -54,6 +55,21 @@
   }
   &.open {
     display: block;
+  }
+  @include media-breakpoint-down(xxl) {
+    &__container {
+      max-width: 800px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__container {
+      max-width: 670px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__container {
+      max-width: none;
+    }
   }
 }
 /* /search */

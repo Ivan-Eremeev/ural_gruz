@@ -4,7 +4,7 @@ header.header
     .container
       a(href="#").header__logo.align-self-center
         img(src="img/logo.png", alt="")
-      .header__col 
+      .header__col.order-2.order-md-1
         .header__items 
           .header__item.text-gray.text-ttu 
             .header__item-icon 
@@ -16,9 +16,9 @@ header.header
           .header__item
             .header__item-icon.header__item-icon--hide
             | СБ-ВС: Выходной
-      .header__col.d-none.d-md-block
+      .header__col.order-1.order-md-2
         .header__items 
-          a(href="tel:84951592930").header__item.header__tel 
+          a(href="tel:84951592930").header__item.header__tel.d-none.d-md-flex
             .header__item-icon 
               <svg version="1.1" width="12px" height="12px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
                 <path d="M213,300c-48.9-48.9-59.9-97.7-62.4-117.3c-0.7-5.4,1.2-10.8,5-14.7l39.5-39.5c5.8-5.8,6.8-14.9,2.5-21.8l-63-97.8c-4.8-7.7-14.7-10.5-22.9-6.4L10.8,50C4.2,53.2,0.3,60.2,1.1,67.5c5.3,50.3,27.2,174,148.8,295.6s245.2,143.5,295.6,148.8c7.3,0.7,14.3-3.1,17.5-9.7l47.6-101.1c4.1-8.1,1.3-18-6.4-22.8l-97.8-62.9c-7-4.4-16-3.3-21.8,2.5L345,357.3c-3.8,3.9-9.3,5.7-14.7,5C310.8,359.9,261.9,348.9,213,300L213,300z"/>
@@ -28,7 +28,7 @@ header.header
             .header__item-icon 
               <svg enable-background="new 0 0 24 24" width="12px" height="12px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 0c-4.962 0-9 4.066-9 9.065 0 7.103 8.154 14.437 8.501 14.745.143.127.321.19.499.19s.356-.063.499-.189c.347-.309 8.501-7.643 8.501-14.746 0-4.999-4.038-9.065-9-9.065zm0 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"/></svg>
             | г. Екатеринбург, ул. Шефская, 1б/у
-          a(href="mailto:infо@uralgpo.ru").header__item 
+          a(href="mailto:infо@uralgpo.ru").header__item.d-none.d-md-flex
             .header__item-icon 
               <svg version="1.1" width="12px" height="12px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
                 <path d="M507.49,101.721L352.211,256L507.49,410.279c2.807-5.867,4.51-12.353,4.51-19.279V121"/>
@@ -37,7 +37,7 @@ header.header
                 <path d="M331,277.211l-21.973,21.973c-29.239,29.239-76.816,29.239-106.055,0L181,277.211L25.721,431.49C31.588,434.297,38.073,436,45,436h422c6.927,0,13.412-1.703,19.279-4.51L331,277.211z"/>
               </svg>
             | infо@uralgpo.ru
-      .header__col 
+      .header__col.order-3
         .header__btn.btn.btn--white Заказать звонок
         .header__cart 
           .header__item-icon 
@@ -380,7 +380,7 @@ header.header
 
       // search
       form(action="#").search#search
-        .container 
+        .container
           .search__container 
             .search__input 
               input(type="text" placeholder="Поиск по сайту")
